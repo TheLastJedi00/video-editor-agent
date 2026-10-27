@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "skills": {
+    "caption-animation": {
+      "source": "iart-ai/tiktok-video-skills",
+      "sourceType": "github",
+      "skillPath": "skills/caption-animation/SKILL.md",
+      "computedHash": "1bcfe2026d1b2a81ff7257d7149f4a555d6d28e238be909050c308bec85ea513"
+    },
+    "edge-tts": {
+      "source": "aahl/skills",
+      "sourceType": "github",
+      "skillPath": "skills/edge-tts/SKILL.md",
+      "computedHash": "a710d8b18391f4d55e6409b89218cbd9b48c7fc80b447d234801b36e3066d545"
+    },
+    "faster-whisper": {
+      "source": "theplasmak/faster-whisper",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "f583000a29d28a6f1298071274eda87ae48c1da0a24709a2c7c08b2742289e30"
+    },
+    "ffmpeg-skill": {
+      "source": "kajisho5/ffmpeg-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "48a90c38952b1ab55454f6830cb96682191d346bd80d7d0841a767f323b0dea5"
+    },
+    "openai-whisper": {
+      "source": "steipete/clawdis",
+      "sourceType": "github",
+      "skillPath": "skills/openai-whisper/SKILL.md",
+      "computedHash": "91dfa3149f593d2e794aadc9f78cffd5d274ff1366f01b777b77abfd2b5474d8"
+    },
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-best-practices/SKILL.md",
+      "computedHash": "105ddafe7e16db760acf88b5aca1ea13a2ff3952e66058e8db41a9cd49df7dbd"
+    },
+    "remotion-create": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-create/SKILL.md",
+      "computedHash": "e6a84bb8d2263f023c1f6a6946cf25ff5490afaff8cb5a5873fb033dfdef04e5"
+    }
+  }
+}
