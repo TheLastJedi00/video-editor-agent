@@ -23,9 +23,16 @@ Before editing any video, follow these files. They are imported here so they loa
 
 ## Current state
 
-No application code exists yet. No language, framework, build system, or test setup has been chosen, and the directory is not a git repository. When code is added, update this file with the build, lint, and test commands (including how to run a single test) and a summary of the architecture.
+The only application code is `remotion/`, a Remotion (React + TypeScript) project that renders the graphics layer of an edit: captions, infographics/animations, hook and end cards. There is no test setup.
 
-What the repository holds today is the agent's toolset: third-party skills that cover the video/audio pipeline.
+- `remotion/src/Reel.tsx`: the Reels composition (base video, punch-ins, insert timeline, captions, end card). Times are seconds on the jump-cut timeline.
+- `remotion/src/Inserts.tsx`, `Captions.tsx`, `theme.ts`: scenes, word-timed captions, and identity tokens and fonts (via `@remotion/google-fonts`, so they need not be installed on the system).
+- `remotion/src/data/words.json`: word timings (Whisper, corrected and remapped to the cut timeline) in the `@remotion/captions` `Caption` format.
+- `remotion/public/base.mp4`: the jump-cut base video, generated per edit and ignored by git (`*.mp4`).
+
+Commands, run from `remotion/`: `npm i`, `npm run dev` (Studio), `npm run lint` (eslint + tsc), `npx remotion still Reel out.png --frame=N`, `npx remotion render Reel out.mp4 --codec=h264 --color-space=bt709 --pixel-format=yuv420p`. Render in BT.709 with `yuv420p`; the default output fails the `check.py` pixel-format check for Reels.
+
+The rest of the repository is the agent's toolset: third-party skills that cover the video/audio pipeline.
 
 | Skill | Role |
 |---|---|
@@ -39,4 +46,5 @@ What the repository holds today is the agent's toolset: third-party skills that 
 
 - Skills are installed with the `skills` CLI and pinned in `skills-lock.json` (source repo plus content hash). Re-install or update them through that tool. Do not hand-edit vendored skill files, because the edits break the hash and are lost on update.
 - `.agents/skills/` holds the installed copies, shared by Claude Code, Gemini CLI, GitHub Copilot, and Antigravity. Entries in `.claude/skills/` are symlinks into it, except `ffmpeg-skill`, which is a separate real copy. To install a skill the same way, pass all five agents: `npx skills add <repo> --skill <name> -a antigravity antigravity-cli claude-code gemini-cli github-copilot -y`.
+- Local patch, which breaks the `faster-whisper` hash and must be reapplied after an update until upstream fixes it: `.agents/skills/faster-whisper/requirements.txt` pins `av<19`, because PyAV 19 removed the `metadata_errors` argument that faster-whisper 1.2.1 passes to `av.open`.
 - The vendored skills bring their own `.claude/`, `.github/`, and CI files (for example, under `ffmpeg-skill/`). Those belong to the upstream projects and are not this project's configuration.
