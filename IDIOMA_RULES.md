@@ -8,8 +8,8 @@ principal.
 ## Regra 1: sempre perguntar o idioma prioritário
 
 Sempre que um vídeo chegar para edição, pergunte qual idioma tem prioridade na legenda, mesmo
-que um vídeo anterior da conversa tenha usado uma resposta. A pergunta vai **na mesma chamada**
-do `AskUserQuestion` que pergunta o modelo (Aula ou Reels) e a identidade visual.
+que um vídeo anterior da conversa tenha usado uma resposta. A pergunta vai **na mesma mensagem**
+que pergunta o modelo (Aula ou Reels) e a identidade visual (ver `AGENTS.md`, passo 0).
 
 | Opção | Legenda principal (visual padrão) | Legenda secundária (sutil, embaixo) |
 |---|---|---|

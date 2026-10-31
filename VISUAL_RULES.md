@@ -9,9 +9,10 @@ Atualize este resumo quando o guia mudar.
 
 **Toda vez que um vídeo for enviado para edição, pergunte qual identidade seguir antes de
 planejar ou renderizar qualquer coisa**, mesmo que um vídeo anterior da conversa tenha usado
-uma identidade. Use o `AskUserQuestion` com as três opções abaixo e, na mesma chamada, pergunte
-sempre o modelo de edição (Aula ou Reels, ver `VIDEO_RULES.md`) e o idioma prioritário da
-legenda (Português ou Inglês, ver `IDIOMA_RULES.md`).
+uma identidade. Pergunte com as três opções abaixo e, na mesma mensagem, pergunte sempre o
+modelo de edição (Aula ou Reels, ver `VIDEO_RULES.md`) e o idioma prioritário da legenda
+(Português ou Inglês, ver `IDIOMA_RULES.md`). Use a ferramenta de perguntas do agente, se houver
+(como o `AskUserQuestion` do Claude Code). Ver `AGENTS.md`, passo 0.
 
 | Opção | Tom | Base | Acento | Fontes |
 |---|---|---|---|---|
