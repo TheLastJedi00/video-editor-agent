@@ -6,9 +6,9 @@ e *como* o vídeo se comporta.
 
 ## Fluxo comum (os dois modelos)
 
-1. **Perguntar** sempre que um vídeo chegar em `input/`, antes de qualquer outra etapa, com duas
-   perguntas na mesma chamada: o estilo de vídeo (Aula ou Reels) e a identidade visual
-   (`VISUAL_RULES.md`).
+1. **Perguntar** sempre que um vídeo chegar em `input/`, antes de qualquer outra etapa, com três
+   perguntas na mesma chamada: o estilo de vídeo (Aula ou Reels), a identidade visual
+   (`VISUAL_RULES.md`) e o idioma prioritário da legenda (`IDIOMA_RULES.md`).
 2. **Inspecionar** o vídeo com `ffmpeg-skill` (`probe.py`): duração, resolução, fps, áudio. Gere
    uma contact sheet para ver onde o apresentador fica no quadro e que áreas estão livres.
 3. **Transcrever** com `faster-whisper`, com timestamps por palavra. A transcrição é a base de
@@ -16,7 +16,8 @@ e *como* o vídeo se comporta.
 4. **Mapear o conteúdo:** leia a transcrição e liste os momentos editáveis (conceitos, listas,
    números, comparações, passos, exemplos) com início e fim em segundos.
 5. **Apresentar o plano** antes de renderizar: a lista de inserts (tipo, texto, início–fim,
-   posição) e o formato de saída. Espere aprovação. Em vídeos longos, uma renderização errada
+   posição), os efeitos sonoros de cada insert (`SFX_RULES.md`), as traduções da legenda
+   (`IDIOMA_RULES.md`) e o formato de saída. Espere aprovação. Em vídeos longos, uma renderização errada
    custa caro.
 6. **Renderizar:** use Remotion (`remotion-best-practices`) para infográficos, animações e
    legendas, e `ffmpeg-skill` para cortes, áudio, composição e exportação.
@@ -25,6 +26,9 @@ e *como* o vídeo se comporta.
 
 Regras gerais:
 
+- Legenda sempre bilíngue (pt-BR + inglês), com o idioma escolhido como principal e o outro
+  como linha sutil abaixo. Ver `IDIOMA_RULES.md`.
+- Todo elemento gráfico que entra em tela leva efeito sonoro. Ver `SFX_RULES.md`.
 - Não invente conteúdo. Infográficos e exemplos representam **só o que o apresentador disse**.
   Termos técnicos são escritos como a transcrição corrigida os mostra.
 - Revise a transcrição antes de usar: corrija nomes próprios, termos técnicos e siglas que o
