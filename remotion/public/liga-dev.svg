@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 236" fill="none">
+  <!-- Símbolo da marca (componente Logo), sem os drop-shadows:
+       em 16px a sombra não se lê e só borra a silhueta. -->
+  <rect width="236" height="236" rx="80" fill="url(#a)" />
+  <rect width="236" height="236" rx="80" fill="url(#b)" />
+  <path
+    d="M121.294 21.5C132.616 21.5 141.794 30.6782 141.794 42V69.5H114.294C102.972 69.5 93.7942 60.3218 93.7942 49V21.5H121.294Z"
+    stroke="white" stroke-width="9" />
+  <path
+    d="M139 82.0884H141.677V101.467C141.677 123.018 138.113 144.42 131.131 164.808L122.088 191.213V130.265H93.5001V127.588C93.5001 102.459 113.871 82.0884 139 82.0884Z"
+    stroke="white" stroke-width="9" />
+  <defs>
+    <linearGradient id="a" x1="236" y1="0.597671" x2="0" y2="235.402" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#47807F" />
+      <stop offset="1" stop-color="#4F74AE" />
+    </linearGradient>
+    <linearGradient id="b" x1="118" y1="0" x2="118" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0.408654" stop-color="#525252" stop-opacity="0" />
+      <stop offset="1" stop-opacity="0.62" />
+    </linearGradient>
+  </defs>
+</svg>

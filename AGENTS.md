@@ -105,6 +105,15 @@ hook and end cards, and sound effects. No test setup.
 - `src/Reel.tsx`: the Reels composition (base video, punch-ins, insert timeline, captions, end
   card). Times are seconds on the jump-cut timeline. It holds the last edit; rewrite its
   timeline for each new Reels edit.
+- `src/Aula.tsx`: the Aula composition (1920×1080): the presenter shrinks to 60% at top-left while
+  an infographic is on, with captions under it. Generic; do not rewrite per edit.
+- `src/AulaEdit.tsx`: **the current Aula edit**: `AULA_DURATION`, the insert timeline
+  (`AULA_INSERTS`) and the inserts `I01`…, plus `src/data/aula_subs.json` (phrase blocks
+  `{ startMs, endMs, en, pt }`). Rewrite both for each new Aula edit.
+- `src/AulaKit.tsx`: reusable Aula building blocks (panel, list, term card, code box, diagram
+  boxes, columns, icons, SFX at 0.6×). `src/AulaCaptions.tsx`: the discreet bilingual phrase
+  captions. `src/ligaDev.ts`: Liga Dev tokens, fonts and motion helpers.
+- `public/aula_base.mp4`: the 1080p Aula base video, generated per edit, git-ignored.
 - `src/Inserts.tsx`: the animated scenes. `src/Captions.tsx`: word-timed captions with an
   optional secondary-language line (`secondary` prop). `src/theme.ts`: identity tokens and fonts
   (via `@remotion/google-fonts`; nothing to install). Swap the tokens to the chosen identity.
