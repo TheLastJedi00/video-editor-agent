@@ -1,975 +1,1087 @@
 [
  {
-  "text": "Eu",
-  "startMs": 120,
-  "endMs": 560,
-  "timestampMs": 120,
-  "confidence": 0.912
+  "text": "If you're not seen,",
+  "startMs": 80,
+  "endMs": 1210,
+  "timestampMs": 80,
+  "confidence": 1
  },
  {
-  "text": "acho",
-  "startMs": 560,
-  "endMs": 740,
-  "timestampMs": 560,
-  "confidence": 0.999
+  "text": "you don't",
+  "startMs": 1210,
+  "endMs": 1745,
+  "timestampMs": 1210,
+  "confidence": 1
  },
  {
-  "text": "engraçado",
-  "startMs": 740,
-  "endMs": 1380,
-  "timestampMs": 740,
-  "confidence": 0.999
+  "text": "get a job.",
+  "startMs": 1745,
+  "endMs": 2580,
+  "timestampMs": 1745,
+  "confidence": 1
  },
  {
-  "text": "que",
-  "startMs": 1380,
-  "endMs": 1500,
-  "timestampMs": 1380,
-  "confidence": 0.751
+  "text": "Last week",
+  "startMs": 2580,
+  "endMs": 3180,
+  "timestampMs": 2580,
+  "confidence": 1
  },
  {
-  "text": "eu",
-  "startMs": 1500,
-  "endMs": 1800,
-  "timestampMs": 1500,
-  "confidence": 0.855
- },
- {
-  "text": "lembro",
-  "startMs": 1800,
-  "endMs": 2020,
-  "timestampMs": 1800,
-  "confidence": 0.999
- },
- {
-  "text": "que",
-  "startMs": 2020,
-  "endMs": 2120,
-  "timestampMs": 2020,
-  "confidence": 0.993
- },
- {
-  "text": "quando",
-  "startMs": 2120,
-  "endMs": 2300,
-  "timestampMs": 2120,
-  "confidence": 0.968
- },
- {
-  "text": "eu",
-  "startMs": 2300,
-  "endMs": 2380,
-  "timestampMs": 2300,
-  "confidence": 0.989
- },
- {
-  "text": "estava",
-  "startMs": 2380,
-  "endMs": 2480,
-  "timestampMs": 2380,
-  "confidence": 0.803
- },
- {
-  "text": "aprendendo",
-  "startMs": 2480,
-  "endMs": 2800,
-  "timestampMs": 2480,
-  "confidence": 0.998
- },
- {
-  "text": "programação,",
-  "startMs": 2800,
-  "endMs": 3520,
-  "timestampMs": 2800,
-  "confidence": 0.975
- },
- {
-  "text": "eu",
-  "startMs": 3560,
-  "endMs": 3880,
-  "timestampMs": 3560,
-  "confidence": 0.999
- },
- {
-  "text": "ouvia",
-  "startMs": 3880,
-  "endMs": 4160,
-  "timestampMs": 3880,
-  "confidence": 0.945
- },
- {
-  "text": "algumas",
-  "startMs": 4160,
+  "text": "I was heading home",
+  "startMs": 3180,
   "endMs": 4380,
-  "timestampMs": 4160,
-  "confidence": 1.0
+  "timestampMs": 3180,
+  "confidence": 1
  },
  {
-  "text": "pessoas",
+  "text": "riding with a few",
   "startMs": 4380,
-  "endMs": 4700,
+  "endMs": 5487,
   "timestampMs": 4380,
-  "confidence": 1.0
+  "confidence": 1
  },
  {
-  "text": "falando",
-  "startMs": 4700,
-  "endMs": 5020,
-  "timestampMs": 4700,
-  "confidence": 0.999
+  "text": "rideshare drivers.",
+  "startMs": 5487,
+  "endMs": 6913,
+  "timestampMs": 5487,
+  "confidence": 1
  },
  {
-  "text": "que",
-  "startMs": 5020,
-  "endMs": 5220,
-  "timestampMs": 5020,
-  "confidence": 1.0
+  "text": "Twice in a row,",
+  "startMs": 6913,
+  "endMs": 8552,
+  "timestampMs": 6913,
+  "confidence": 1
  },
  {
-  "text": "não",
-  "startMs": 5220,
-  "endMs": 5300,
-  "timestampMs": 5220,
-  "confidence": 0.999
+  "text": "after seeing",
+  "startMs": 8552,
+  "endMs": 9863,
+  "timestampMs": 8552,
+  "confidence": 1
  },
  {
-  "text": "era",
-  "startMs": 5300,
-  "endMs": 5380,
-  "timestampMs": 5300,
-  "confidence": 0.999
+  "text": "my work badge,",
+  "startMs": 9863,
+  "endMs": 11433,
+  "timestampMs": 9863,
+  "confidence": 1
  },
  {
-  "text": "obrigatório",
-  "startMs": 5380,
-  "endMs": 5800,
-  "timestampMs": 5380,
-  "confidence": 0.999
+  "text": "they asked",
+  "startMs": 11433,
+  "endMs": 12028,
+  "timestampMs": 11433,
+  "confidence": 1
  },
  {
-  "text": "eu",
-  "startMs": 5800,
-  "endMs": 5900,
-  "timestampMs": 5800,
-  "confidence": 0.734
+  "text": "a bit about",
+  "startMs": 12028,
+  "endMs": 12682,
+  "timestampMs": 12028,
+  "confidence": 1
  },
  {
-  "text": "saber",
-  "startMs": 5900,
-  "endMs": 6040,
-  "timestampMs": 5900,
-  "confidence": 0.995
+  "text": "my job and stuff.",
+  "startMs": 12682,
+  "endMs": 14013,
+  "timestampMs": 12682,
+  "confidence": 1
  },
  {
-  "text": "inglês,",
-  "startMs": 6040,
-  "endMs": 6520,
-  "timestampMs": 6040,
-  "confidence": 1.0
+  "text": "And these two",
+  "startMs": 14013,
+  "endMs": 14914,
+  "timestampMs": 14013,
+  "confidence": 1
  },
  {
-  "text": "né?",
-  "startMs": 6540,
-  "endMs": 6620,
-  "timestampMs": 6540,
-  "confidence": 0.997
+  "text": "drivers who asked",
+  "startMs": 14914,
+  "endMs": 16133,
+  "timestampMs": 14914,
+  "confidence": 1
  },
  {
-  "text": "Só",
-  "startMs": 6920,
-  "endMs": 7360,
-  "timestampMs": 6920,
-  "confidence": 1.0
+  "text": "were studying",
+  "startMs": 16133,
+  "endMs": 17227,
+  "timestampMs": 16133,
+  "confidence": 1
  },
  {
-  "text": "que",
-  "startMs": 7360,
-  "endMs": 7640,
-  "timestampMs": 7360,
-  "confidence": 1.0
+  "text": "software engineering,",
+  "startMs": 17227,
+  "endMs": 19293,
+  "timestampMs": 17227,
+  "confidence": 1
  },
  {
-  "text": "chega",
-  "startMs": 7640,
-  "endMs": 8280,
-  "timestampMs": 7640,
-  "confidence": 0.97
+  "text": "systems analysis",
+  "startMs": 19293,
+  "endMs": 20711,
+  "timestampMs": 19293,
+  "confidence": 1
  },
  {
-  "text": "num",
-  "startMs": 8280,
-  "endMs": 8460,
-  "timestampMs": 8280,
-  "confidence": 0.971
+  "text": "and other IT courses.",
+  "startMs": 20711,
+  "endMs": 22893,
+  "timestampMs": 20711,
+  "confidence": 1
  },
  {
-  "text": "ponto",
-  "startMs": 8460,
-  "endMs": 8680,
-  "timestampMs": 8460,
-  "confidence": 1.0
+  "text": "And they couldn't",
+  "startMs": 22893,
+  "endMs": 23555,
+  "timestampMs": 22893,
+  "confidence": 1
  },
  {
-  "text": "em",
-  "startMs": 8680,
-  "endMs": 8860,
-  "timestampMs": 8680,
-  "confidence": 0.962
+  "text": "land their first job.",
+  "startMs": 23555,
+  "endMs": 24473,
+  "timestampMs": 23555,
+  "confidence": 1
  },
  {
-  "text": "que",
-  "startMs": 8860,
-  "endMs": 8940,
-  "timestampMs": 8860,
-  "confidence": 1.0
+  "text": "One of them",
+  "startMs": 24473,
+  "endMs": 25240,
+  "timestampMs": 24473,
+  "confidence": 1
  },
  {
-  "text": "é",
-  "startMs": 8880,
-  "endMs": 9000,
-  "timestampMs": 8880,
-  "confidence": 0.998
+  "text": "was even",
+  "startMs": 25240,
+  "endMs": 25798,
+  "timestampMs": 25240,
+  "confidence": 1
  },
  {
-  "text": "o",
-  "startMs": 9000,
-  "endMs": 9080,
-  "timestampMs": 9000,
-  "confidence": 1.0
+  "text": "finishing his degree",
+  "startMs": 25798,
+  "endMs": 27193,
+  "timestampMs": 25798,
+  "confidence": 1
  },
  {
-  "text": "seguinte,",
-  "startMs": 9020,
-  "endMs": 9180,
-  "timestampMs": 9020,
-  "confidence": 1.0
+  "text": "and still couldn't",
+  "startMs": 27193,
+  "endMs": 27660,
+  "timestampMs": 27193,
+  "confidence": 1
  },
  {
-  "text": "eu",
-  "startMs": 9340,
-  "endMs": 9520,
-  "timestampMs": 9340,
-  "confidence": 1.0
+  "text": "land his first job.",
+  "startMs": 27660,
+  "endMs": 28513,
+  "timestampMs": 27660,
+  "confidence": 1
  },
  {
-  "text": "quero",
-  "startMs": 9520,
-  "endMs": 9880,
-  "timestampMs": 9520,
-  "confidence": 1.0
+  "text": "There's",
+  "startMs": 28513,
+  "endMs": 28945,
+  "timestampMs": 28513,
+  "confidence": 1
  },
  {
-  "text": "evoluir,",
-  "startMs": 9880,
-  "endMs": 10880,
-  "timestampMs": 9880,
-  "confidence": 1.0
+  "text": "a small confusion",
+  "startMs": 28945,
+  "endMs": 29994,
+  "timestampMs": 28945,
+  "confidence": 1
  },
  {
-  "text": "eu",
-  "startMs": 10920,
-  "endMs": 11060,
-  "timestampMs": 10920,
-  "confidence": 1.0
+  "text": "people have",
+  "startMs": 29994,
+  "endMs": 30673,
+  "timestampMs": 29994,
+  "confidence": 1
  },
  {
-  "text": "quero",
-  "startMs": 11060,
-  "endMs": 11220,
-  "timestampMs": 11060,
-  "confidence": 1.0
+  "text": "when trying to get",
+  "startMs": 30673,
+  "endMs": 31633,
+  "timestampMs": 30673,
+  "confidence": 1
  },
  {
-  "text": "evoluir",
-  "startMs": 11220,
-  "endMs": 11500,
-  "timestampMs": 11220,
-  "confidence": 1.0
+  "text": "into IT. I had",
+  "startMs": 31633,
+  "endMs": 32380,
+  "timestampMs": 31633,
+  "confidence": 1
  },
  {
-  "text": "na",
-  "startMs": 11500,
-  "endMs": 11580,
-  "timestampMs": 11500,
-  "confidence": 1.0
+  "text": "it too.",
+  "startMs": 32380,
+  "endMs": 33013,
+  "timestampMs": 32380,
+  "confidence": 1
  },
  {
-  "text": "carreira,",
-  "startMs": 11560,
-  "endMs": 11880,
-  "timestampMs": 11560,
-  "confidence": 1.0
+  "text": "It's piling",
+  "startMs": 33013,
+  "endMs": 34003,
+  "timestampMs": 33013,
+  "confidence": 1
  },
  {
-  "text": "e",
-  "startMs": 12000,
-  "endMs": 12260,
-  "timestampMs": 12000,
-  "confidence": 1.0
+  "text": "up certificates",
+  "startMs": 34003,
+  "endMs": 35353,
+  "timestampMs": 34003,
+  "confidence": 1
  },
  {
-  "text": "eu",
-  "startMs": 12260,
-  "endMs": 12360,
-  "timestampMs": 12260,
-  "confidence": 1.0
+  "text": "with no",
+  "startMs": 35353,
+  "endMs": 35945,
+  "timestampMs": 35353,
+  "confidence": 1
  },
  {
-  "text": "comecei",
-  "startMs": 12360,
-  "endMs": 12900,
-  "timestampMs": 12360,
-  "confidence": 1.0
+  "text": "practical proof",
+  "startMs": 35945,
+  "endMs": 37213,
+  "timestampMs": 35945,
+  "confidence": 1
  },
  {
-  "text": "a",
-  "startMs": 12900,
-  "endMs": 12980,
-  "timestampMs": 12900,
-  "confidence": 1.0
+  "text": "that you know",
+  "startMs": 37213,
+  "endMs": 38292,
+  "timestampMs": 37213,
+  "confidence": 1
  },
  {
-  "text": "procurar",
-  "startMs": 12960,
-  "endMs": 13620,
-  "timestampMs": 12960,
-  "confidence": 1.0
+  "text": "what you promise",
+  "startMs": 38292,
+  "endMs": 39620,
+  "timestampMs": 38292,
+  "confidence": 1
  },
  {
-  "text": "assuntos",
-  "startMs": 13620,
-  "endMs": 14500,
-  "timestampMs": 13620,
-  "confidence": 1.0
+  "text": "to deliver.",
+  "startMs": 39620,
+  "endMs": 40913,
+  "timestampMs": 39620,
+  "confidence": 1
  },
  {
-  "text": "de",
-  "startMs": 14500,
-  "endMs": 14900,
-  "timestampMs": 14500,
-  "confidence": 1.0
+  "text": "And it's a common",
+  "startMs": 40913,
+  "endMs": 42448,
+  "timestampMs": 40913,
+  "confidence": 1
  },
  {
-  "text": "maior",
-  "startMs": 14900,
-  "endMs": 15500,
-  "timestampMs": 14900,
-  "confidence": 1.0
+  "text": "practice, right?",
+  "startMs": 42448,
+  "endMs": 44253,
+  "timestampMs": 42448,
+  "confidence": 1
  },
  {
-  "text": "senioridade",
-  "startMs": 15500,
-  "endMs": 16080,
-  "timestampMs": 15500,
-  "confidence": 0.911
+  "text": "We don't",
+  "startMs": 44253,
+  "endMs": 44747,
+  "timestampMs": 44253,
+  "confidence": 1
  },
  {
-  "text": "para",
-  "startMs": 16080,
-  "endMs": 16280,
-  "timestampMs": 16080,
-  "confidence": 0.714
+  "text": "use social media,",
+  "startMs": 44747,
+  "endMs": 45796,
+  "timestampMs": 44747,
+  "confidence": 1
  },
  {
-  "text": "estudar,",
-  "startMs": 16280,
-  "endMs": 16660,
-  "timestampMs": 16280,
-  "confidence": 1.0
+  "text": "we don't use LinkedIn,",
+  "startMs": 45796,
+  "endMs": 47473,
+  "timestampMs": 45796,
+  "confidence": 1
  },
  {
-  "text": "e",
-  "startMs": 16970,
-  "endMs": 17170,
-  "timestampMs": 16970,
-  "confidence": 1.0
+  "text": "no contact",
+  "startMs": 47473,
+  "endMs": 48308,
+  "timestampMs": 47473,
+  "confidence": 1
  },
  {
-  "text": "basicamente",
-  "startMs": 17170,
-  "endMs": 17610,
-  "timestampMs": 17170,
-  "confidence": 0.995
+  "text": "with recruiters,",
+  "startMs": 48308,
+  "endMs": 49645,
+  "timestampMs": 48308,
+  "confidence": 1
  },
  {
-  "text": "não",
-  "startMs": 17610,
-  "endMs": 18130,
-  "timestampMs": 17610,
-  "confidence": 0.995
+  "text": "nothing.",
+  "startMs": 49645,
+  "endMs": 50513,
+  "timestampMs": 49645,
+  "confidence": 1
  },
  {
-  "text": "existe",
-  "startMs": 18130,
-  "endMs": 18470,
-  "timestampMs": 18130,
-  "confidence": 1.0
+  "text": "And we keep chasing",
+  "startMs": 50747,
+  "endMs": 51772,
+  "timestampMs": 50747,
+  "confidence": 1
  },
  {
-  "text": "material",
-  "startMs": 18470,
-  "endMs": 18910,
-  "timestampMs": 18470,
-  "confidence": 1.0
+  "text": "that first job",
+  "startMs": 51772,
+  "endMs": 52567,
+  "timestampMs": 51772,
+  "confidence": 1
  },
  {
-  "text": "de",
-  "startMs": 18910,
-  "endMs": 19130,
-  "timestampMs": 18910,
-  "confidence": 1.0
+  "text": "while you're",
+  "startMs": 52567,
+  "endMs": 53321,
+  "timestampMs": 52567,
+  "confidence": 1
  },
  {
-  "text": "estudos",
-  "startMs": 19130,
-  "endMs": 19450,
-  "timestampMs": 19130,
-  "confidence": 0.98
+  "text": "out there",
+  "startMs": 53321,
+  "endMs": 53887,
+  "timestampMs": 53321,
+  "confidence": 1
  },
  {
-  "text": "em",
-  "startMs": 19450,
-  "endMs": 19530,
-  "timestampMs": 19450,
-  "confidence": 1.0
+  "text": "competing for a spot.",
+  "startMs": 53887,
+  "endMs": 55407,
+  "timestampMs": 53887,
+  "confidence": 1
  },
  {
-  "text": "português",
-  "startMs": 19530,
-  "endMs": 19970,
-  "timestampMs": 19530,
-  "confidence": 1.0
+  "text": "There are 10,000",
+  "startMs": 55807,
+  "endMs": 56507,
+  "timestampMs": 55807,
+  "confidence": 1
  },
  {
-  "text": "para",
-  "startMs": 19970,
-  "endMs": 20170,
-  "timestampMs": 19970,
-  "confidence": 0.999
+  "text": "other people",
+  "startMs": 56507,
+  "endMs": 57032,
+  "timestampMs": 56507,
+  "confidence": 1
  },
  {
-  "text": "esses",
-  "startMs": 20170,
-  "endMs": 20390,
-  "timestampMs": 20170,
-  "confidence": 1.0
+  "text": "after that first job",
+  "startMs": 57032,
+  "endMs": 57907,
+  "timestampMs": 57032,
+  "confidence": 1
  },
  {
-  "text": "assuntos",
-  "startMs": 20390,
-  "endMs": 20850,
-  "timestampMs": 20390,
-  "confidence": 1.0
+  "text": "who can't",
+  "startMs": 57907,
+  "endMs": 58768,
+  "timestampMs": 57907,
+  "confidence": 1
  },
  {
-  "text": "específicos.",
-  "startMs": 20850,
-  "endMs": 21590,
-  "timestampMs": 20850,
-  "confidence": 0.997
+  "text": "get it either,",
+  "startMs": 58768,
+  "endMs": 60167,
+  "timestampMs": 58768,
+  "confidence": 1
  },
  {
-  "text": "Eles",
-  "startMs": 21590,
-  "endMs": 21970,
-  "timestampMs": 21590,
-  "confidence": 0.257
+  "text": "because none of them",
+  "startMs": 60167,
+  "endMs": 61322,
+  "timestampMs": 60167,
+  "confidence": 1
  },
  {
-  "text": "até",
-  "startMs": 21970,
-  "endMs": 22110,
-  "timestampMs": 21970,
-  "confidence": 0.971
+  "text": "has real proof",
+  "startMs": 61322,
+  "endMs": 62130,
+  "timestampMs": 61322,
+  "confidence": 1
  },
  {
-  "text": "existem,",
-  "startMs": 22110,
-  "endMs": 22430,
-  "timestampMs": 22110,
-  "confidence": 0.933
+  "text": "of that experience.",
+  "startMs": 62130,
+  "endMs": 63427,
+  "timestampMs": 62130,
+  "confidence": 1
  },
  {
-  "text": "até",
-  "startMs": 22630,
-  "endMs": 22870,
-  "timestampMs": 22630,
-  "confidence": 0.554
+  "text": "Add to",
+  "startMs": 63847,
+  "endMs": 64442,
+  "timestampMs": 63847,
+  "confidence": 1
  },
  {
-  "text": "existem,",
-  "startMs": 22870,
-  "endMs": 23150,
-  "timestampMs": 22870,
-  "confidence": 0.982
+  "text": "that the statistics",
+  "startMs": 64442,
+  "endMs": 66327,
+  "timestampMs": 64442,
+  "confidence": 1
  },
  {
-  "text": "tá?",
-  "startMs": 23330,
-  "endMs": 23410,
-  "timestampMs": 23330,
-  "confidence": 0.936
+  "text": "showing junior",
+  "startMs": 66327,
+  "endMs": 67065,
+  "timestampMs": 66327,
+  "confidence": 1
  },
  {
-  "text": "Mas",
-  "startMs": 23680,
-  "endMs": 23840,
-  "timestampMs": 23680,
-  "confidence": 0.997
+  "text": "roles are shrinking",
+  "startMs": 67065,
+  "endMs": 68067,
+  "timestampMs": 67065,
+  "confidence": 1
  },
  {
-  "text": "a",
-  "startMs": 23840,
-  "endMs": 23940,
-  "timestampMs": 23840,
-  "confidence": 0.995
+  "text": "and the myth",
+  "startMs": 68067,
+  "endMs": 69020,
+  "timestampMs": 68067,
+  "confidence": 1
  },
  {
-  "text": "maioria",
-  "startMs": 23940,
-  "endMs": 24200,
-  "timestampMs": 23940,
-  "confidence": 0.999
+  "text": "that AI",
+  "startMs": 69020,
+  "endMs": 69576,
+  "timestampMs": 69020,
+  "confidence": 1
  },
  {
-  "text": "da",
-  "startMs": 24200,
-  "endMs": 24460,
-  "timestampMs": 24200,
-  "confidence": 0.998
+  "text": "is stealing jobs,",
+  "startMs": 69576,
+  "endMs": 71247,
+  "timestampMs": 69576,
+  "confidence": 1
  },
  {
-  "text": "galera",
-  "startMs": 24460,
-  "endMs": 24740,
-  "timestampMs": 24460,
-  "confidence": 0.999
+  "text": "and people",
+  "startMs": 71247,
+  "endMs": 71991,
+  "timestampMs": 71247,
+  "confidence": 1
  },
  {
-  "text": "que",
-  "startMs": 24740,
-  "endMs": 25040,
-  "timestampMs": 24740,
-  "confidence": 0.995
+  "text": "start to panic.",
+  "startMs": 71991,
+  "endMs": 73380,
+  "timestampMs": 71991,
+  "confidence": 1
  },
  {
-  "text": "produz",
-  "startMs": 25040,
-  "endMs": 25340,
-  "timestampMs": 25040,
-  "confidence": 0.998
+  "text": "Real quick on that:",
+  "startMs": 73380,
+  "endMs": 75040,
+  "timestampMs": 73380,
+  "confidence": 1
  },
  {
-  "text": "conteúdo",
-  "startMs": 25340,
-  "endMs": 25780,
-  "timestampMs": 25340,
-  "confidence": 0.997
+  "text": "they're not",
+  "startMs": 75040,
+  "endMs": 75631,
+  "timestampMs": 75040,
+  "confidence": 1
  },
  {
-  "text": "explorando",
-  "startMs": 25780,
-  "endMs": 26940,
-  "timestampMs": 25780,
-  "confidence": 0.859
+  "text": "shrinking because",
+  "startMs": 75631,
+  "endMs": 76544,
+  "timestampMs": 75631,
+  "confidence": 1
  },
  {
-  "text": "esses",
-  "startMs": 26940,
-  "endMs": 27080,
-  "timestampMs": 26940,
-  "confidence": 0.995
+  "text": "of artificial",
+  "startMs": 76544,
+  "endMs": 77242,
+  "timestampMs": 76544,
+  "confidence": 1
  },
  {
-  "text": "assuntos",
-  "startMs": 27080,
-  "endMs": 27600,
-  "timestampMs": 27080,
-  "confidence": 1.0
+  "text": "intelligence,",
+  "startMs": 77242,
+  "endMs": 78180,
+  "timestampMs": 77242,
+  "confidence": 1
  },
  {
-  "text": "em",
-  "startMs": 27600,
-  "endMs": 27720,
-  "timestampMs": 27600,
-  "confidence": 0.997
+  "text": "but because of the",
+  "startMs": 78180,
+  "endMs": 78928,
+  "timestampMs": 78180,
+  "confidence": 1
  },
  {
-  "text": "nível",
-  "startMs": 27720,
-  "endMs": 27960,
-  "timestampMs": 27720,
-  "confidence": 0.995
+  "text": "post-pandemic period.",
+  "startMs": 78928,
+  "endMs": 80000,
+  "timestampMs": 78928,
+  "confidence": 1
  },
  {
-  "text": "mais",
-  "startMs": 27960,
-  "endMs": 28260,
-  "timestampMs": 27960,
-  "confidence": 1.0
+  "text": "During the pandemic,",
+  "startMs": 80460,
+  "endMs": 81270,
+  "timestampMs": 80460,
+  "confidence": 1
  },
  {
-  "text": "aprofundado",
-  "startMs": 28260,
-  "endMs": 29620,
-  "timestampMs": 28260,
-  "confidence": 0.999
+  "text": "salaries were huge,",
+  "startMs": 81270,
+  "endMs": 82100,
+  "timestampMs": 81270,
+  "confidence": 1
  },
  {
-  "text": "é",
-  "startMs": 29620,
-  "endMs": 30030,
-  "timestampMs": 29620,
-  "confidence": 0.743
+  "text": "experienced people",
+  "startMs": 82100,
+  "endMs": 82830,
+  "timestampMs": 82100,
+  "confidence": 1
  },
  {
-  "text": "inglês.",
-  "startMs": 30030,
-  "endMs": 30490,
-  "timestampMs": 30030,
-  "confidence": 0.992
+  "text": "were earning a lot.",
+  "startMs": 82830,
+  "endMs": 83600,
+  "timestampMs": 82830,
+  "confidence": 1
  },
  {
-  "text": "Ou",
-  "startMs": 30630,
-  "endMs": 31070,
-  "timestampMs": 30630,
-  "confidence": 0.999
+  "text": "Because of that,",
+  "startMs": 83600,
+  "endMs": 84887,
+  "timestampMs": 83600,
+  "confidence": 1
  },
  {
-  "text": "é",
-  "startMs": 31070,
-  "endMs": 31410,
-  "timestampMs": 31070,
-  "confidence": 1.0
+  "text": "the market",
+  "startMs": 84887,
+  "endMs": 85691,
+  "timestampMs": 84887,
+  "confidence": 1
  },
  {
-  "text": "um",
-  "startMs": 31410,
-  "endMs": 31630,
-  "timestampMs": 31410,
-  "confidence": 0.98
+  "text": "had to level",
+  "startMs": 85691,
+  "endMs": 86656,
+  "timestampMs": 85691,
+  "confidence": 1
  },
  {
-  "text": "indiano,",
-  "startMs": 31630,
-  "endMs": 32010,
-  "timestampMs": 31630,
-  "confidence": 0.962
+  "text": "out a bit.",
+  "startMs": 86656,
+  "endMs": 87660,
+  "timestampMs": 86656,
+  "confidence": 1
  },
  {
-  "text": "ou",
-  "startMs": 32110,
-  "endMs": 32510,
-  "timestampMs": 32110,
-  "confidence": 1.0
+  "text": "If someone",
+  "startMs": 87947,
+  "endMs": 88512,
+  "timestampMs": 87947,
+  "confidence": 1
  },
  {
-  "text": "é",
-  "startMs": 32510,
-  "endMs": 32730,
-  "timestampMs": 32510,
-  "confidence": 0.999
+  "text": "is getting",
+  "startMs": 88512,
+  "endMs": 89076,
+  "timestampMs": 88512,
+  "confidence": 1
  },
  {
-  "text": "alguns",
-  "startMs": 32730,
-  "endMs": 33470,
-  "timestampMs": 32730,
-  "confidence": 0.315
+  "text": "a high salary,",
+  "startMs": 89076,
+  "endMs": 89927,
+  "timestampMs": 89076,
+  "confidence": 1
  },
  {
-  "text": "asiáticos",
-  "startMs": 33470,
-  "endMs": 34190,
-  "timestampMs": 33470,
-  "confidence": 0.977
+  "text": "it should",
+  "startMs": 89927,
+  "endMs": 90387,
+  "timestampMs": 89927,
+  "confidence": 1
  },
  {
-  "text": "aleatórios,",
-  "startMs": 34190,
-  "endMs": 34670,
-  "timestampMs": 34190,
-  "confidence": 1.0
+  "text": "be someone who truly",
+  "startMs": 90387,
+  "endMs": 91408,
+  "timestampMs": 90387,
+  "confidence": 1
  },
  {
-  "text": "ou",
-  "startMs": 34730,
-  "endMs": 35050,
-  "timestampMs": 34730,
-  "confidence": 1.0
+  "text": "has the knowledge.",
+  "startMs": 91408,
+  "endMs": 92587,
+  "timestampMs": 91408,
+  "confidence": 1
  },
  {
-  "text": "é",
-  "startMs": 35050,
-  "endMs": 35270,
-  "timestampMs": 35050,
-  "confidence": 1.0
+  "text": "So the junior",
+  "startMs": 92587,
+  "endMs": 93497,
+  "timestampMs": 92587,
+  "confidence": 1
  },
  {
-  "text": "a",
-  "startMs": 35270,
-  "endMs": 35350,
-  "timestampMs": 35270,
-  "confidence": 0.991
+  "text": "bar went",
+  "startMs": 93497,
+  "endMs": 94057,
+  "timestampMs": 93497,
+  "confidence": 1
  },
  {
-  "text": "galera",
-  "startMs": 35330,
-  "endMs": 35590,
-  "timestampMs": 35330,
-  "confidence": 1.0
+  "text": "up a few steps.",
+  "startMs": 94057,
+  "endMs": 95307,
+  "timestampMs": 94057,
+  "confidence": 1
  },
  {
-  "text": "da",
-  "startMs": 35590,
-  "endMs": 35730,
-  "timestampMs": 35590,
-  "confidence": 0.998
+  "text": "Today, the ideal way",
+  "startMs": 96527,
+  "endMs": 97780,
+  "timestampMs": 96527,
+  "confidence": 1
  },
  {
-  "text": "América",
-  "startMs": 35730,
-  "endMs": 35870,
-  "timestampMs": 35730,
-  "confidence": 1.0
+  "text": "into the market is",
+  "startMs": 97780,
+  "endMs": 98908,
+  "timestampMs": 97780,
+  "confidence": 1
  },
  {
-  "text": "do",
-  "startMs": 35870,
-  "endMs": 36050,
-  "timestampMs": 35870,
-  "confidence": 1.0
+  "text": "an internship program.",
+  "startMs": 98908,
+  "endMs": 100447,
+  "timestampMs": 98908,
+  "confidence": 1
  },
  {
-  "text": "Norte,",
-  "startMs": 36050,
-  "endMs": 36390,
-  "timestampMs": 36050,
-  "confidence": 1.0
+  "text": "And internship",
+  "startMs": 100447,
+  "endMs": 101150,
+  "timestampMs": 100447,
+  "confidence": 1
  },
  {
-  "text": "né?",
-  "startMs": 36470,
-  "endMs": 36630,
-  "timestampMs": 36470,
-  "confidence": 0.589
+  "text": "programs usually",
+  "startMs": 101150,
+  "endMs": 101954,
+  "timestampMs": 101150,
+  "confidence": 1
  },
  {
-  "text": "Ali,",
-  "startMs": 36750,
-  "endMs": 37070,
-  "timestampMs": 36750,
-  "confidence": 0.589
+  "text": "ask you to go",
+  "startMs": 101954,
+  "endMs": 102607,
+  "timestampMs": 101954,
+  "confidence": 1
  },
  {
-  "text": "Canadá,",
-  "startMs": 37150,
-  "endMs": 37590,
-  "timestampMs": 37150,
-  "confidence": 1.0
+  "text": "through a bootcamp",
+  "startMs": 102607,
+  "endMs": 103901,
+  "timestampMs": 102607,
+  "confidence": 1
  },
  {
-  "text": "Estados",
-  "startMs": 37590,
-  "endMs": 37750,
-  "timestampMs": 37590,
-  "confidence": 0.999
+  "text": "or a hackathon",
+  "startMs": 103901,
+  "endMs": 104907,
+  "timestampMs": 103901,
+  "confidence": 1
  },
  {
-  "text": "Unidos.",
-  "startMs": 37750,
-  "endMs": 38090,
-  "timestampMs": 37750,
-  "confidence": 1.0
+  "text": "as part of",
+  "startMs": 104907,
+  "endMs": 105413,
+  "timestampMs": 104907,
+  "confidence": 1
  },
  {
-  "text": "E",
-  "startMs": 38500,
-  "endMs": 38870,
-  "timestampMs": 38500,
-  "confidence": 0.986
+  "text": "the selection process.",
+  "startMs": 105413,
+  "endMs": 106847,
+  "timestampMs": 105413,
+  "confidence": 1
  },
  {
-  "text": "basicamente",
-  "startMs": 38870,
-  "endMs": 39310,
-  "timestampMs": 38870,
-  "confidence": 0.709
+  "text": "But to wrap up,",
+  "startMs": 106847,
+  "endMs": 108336,
+  "timestampMs": 106847,
+  "confidence": 1
  },
  {
-  "text": "se",
-  "startMs": 39310,
-  "endMs": 39450,
-  "timestampMs": 39310,
-  "confidence": 0.474
+  "text": "the point is:",
+  "startMs": 108336,
+  "endMs": 109627,
+  "timestampMs": 108336,
+  "confidence": 1
  },
  {
-  "text": "o",
-  "startMs": 39450,
-  "endMs": 39550,
-  "timestampMs": 39450,
-  "confidence": 1.0
+  "text": "if you're not seen,",
+  "startMs": 109627,
+  "endMs": 110757,
+  "timestampMs": 109627,
+  "confidence": 1
  },
  {
-  "text": "cara",
-  "startMs": 39550,
-  "endMs": 39710,
-  "timestampMs": 39550,
-  "confidence": 1.0
+  "text": "you don't",
+  "startMs": 110757,
+  "endMs": 111292,
+  "timestampMs": 110757,
+  "confidence": 1
  },
  {
-  "text": "quer",
-  "startMs": 39710,
-  "endMs": 40410,
-  "timestampMs": 39710,
-  "confidence": 0.998
+  "text": "get a job.",
+  "startMs": 111292,
+  "endMs": 112113,
+  "timestampMs": 111292,
+  "confidence": 1
  },
  {
-  "text": "realmente",
-  "startMs": 40410,
-  "endMs": 40810,
-  "timestampMs": 40410,
-  "confidence": 1.0
+  "text": "And use",
+  "startMs": 112113,
+  "endMs": 112754,
+  "timestampMs": 112113,
+  "confidence": 1
  },
  {
-  "text": "evoluir",
-  "startMs": 40810,
-  "endMs": 41330,
-  "timestampMs": 40810,
-  "confidence": 1.0
+  "text": "these hackathon and",
+  "startMs": 112754,
+  "endMs": 114495,
+  "timestampMs": 112754,
+  "confidence": 1
  },
  {
-  "text": "na",
-  "startMs": 41330,
-  "endMs": 41410,
-  "timestampMs": 41330,
-  "confidence": 1.0
+  "text": "bootcamp programs",
+  "startMs": 114495,
+  "endMs": 116053,
+  "timestampMs": 114495,
+  "confidence": 1
  },
  {
-  "text": "carreira",
-  "startMs": 41410,
-  "endMs": 41770,
-  "timestampMs": 41410,
-  "confidence": 1.0
+  "text": "to gain",
+  "startMs": 116053,
+  "endMs": 116479,
+  "timestampMs": 116053,
+  "confidence": 1
  },
  {
-  "text": "dele,",
-  "startMs": 41770,
-  "endMs": 41930,
-  "timestampMs": 41770,
-  "confidence": 0.999
+  "text": "some visibility,",
+  "startMs": 116479,
+  "endMs": 117513,
+  "timestampMs": 116479,
+  "confidence": 1
  },
  {
-  "text": "não",
-  "startMs": 41990,
-  "endMs": 42070,
-  "timestampMs": 41990,
-  "confidence": 0.977
+  "text": "with local companies,",
+  "startMs": 117513,
+  "endMs": 118949,
+  "timestampMs": 117513,
+  "confidence": 1
  },
  {
-  "text": "tem",
-  "startMs": 42070,
-  "endMs": 42230,
-  "timestampMs": 42070,
-  "confidence": 1.0
+  "text": "companies elsewhere,",
+  "startMs": 118949,
+  "endMs": 120317,
+  "timestampMs": 118949,
+  "confidence": 1
  },
  {
-  "text": "pra",
-  "startMs": 42230,
-  "endMs": 42350,
-  "timestampMs": 42230,
-  "confidence": 0.717
+  "text": "recruiters and so on.",
+  "startMs": 120317,
+  "endMs": 122080,
+  "timestampMs": 120317,
+  "confidence": 1
  },
  {
-  "text": "onde",
-  "startMs": 42350,
-  "endMs": 42450,
-  "timestampMs": 42350,
-  "confidence": 0.999
+  "text": "Man, that's the ideal.",
+  "startMs": 122080,
+  "endMs": 123460,
+  "timestampMs": 122080,
+  "confidence": 1
  },
  {
-  "text": "fugir,",
-  "startMs": 42450,
-  "endMs": 42750,
-  "timestampMs": 42450,
-  "confidence": 1.0
+  "text": "Staying",
+  "startMs": 123813,
+  "endMs": 124324,
+  "timestampMs": 123813,
+  "confidence": 1
  },
  {
-  "text": "entendeu?",
-  "startMs": 42770,
-  "endMs": 42910,
-  "timestampMs": 42770,
-  "confidence": 1.0
+  "text": "home binge-watching",
+  "startMs": 124324,
+  "endMs": 125709,
+  "timestampMs": 124324,
+  "confidence": 1
  },
  {
-  "text": "Tipo,",
-  "startMs": 42990,
-  "endMs": 43170,
-  "timestampMs": 42990,
-  "confidence": 0.996
+  "text": "courses,",
+  "startMs": 125709,
+  "endMs": 126493,
+  "timestampMs": 125709,
+  "confidence": 1
  },
  {
-  "text": "em",
-  "startMs": 43170,
-  "endMs": 43250,
-  "timestampMs": 43170,
-  "confidence": 0.816
+  "text": "collecting a pile",
+  "startMs": 126493,
+  "endMs": 127386,
+  "timestampMs": 126493,
+  "confidence": 1
  },
  {
-  "text": "algum",
-  "startMs": 43250,
-  "endMs": 43390,
-  "timestampMs": 43250,
-  "confidence": 1.0
+  "text": "of certificates",
+  "startMs": 127386,
+  "endMs": 128193,
+  "timestampMs": 127386,
+  "confidence": 1
  },
  {
-  "text": "momento",
-  "startMs": 43390,
-  "endMs": 43730,
-  "timestampMs": 43390,
-  "confidence": 1.0
+  "text": "that just sit",
+  "startMs": 128193,
+  "endMs": 128782,
+  "timestampMs": 128193,
+  "confidence": 1
  },
  {
-  "text": "ele",
-  "startMs": 43730,
-  "endMs": 43890,
-  "timestampMs": 43730,
-  "confidence": 0.998
+  "text": "there as decoration,",
+  "startMs": 128782,
+  "endMs": 129689,
+  "timestampMs": 128782,
+  "confidence": 1
  },
  {
-  "text": "vai",
-  "startMs": 43890,
-  "endMs": 44010,
-  "timestampMs": 43890,
-  "confidence": 1.0
+  "text": "on LinkedIn,",
+  "startMs": 129689,
+  "endMs": 130533,
+  "timestampMs": 129689,
+  "confidence": 1
  },
  {
-  "text": "ter",
-  "startMs": 44010,
-  "endMs": 44130,
-  "timestampMs": 44010,
-  "confidence": 1.0
+  "text": "in a drawer",
+  "startMs": 130533,
+  "endMs": 131294,
+  "timestampMs": 130533,
+  "confidence": 1
  },
  {
-  "text": "que",
-  "startMs": 44130,
-  "endMs": 44210,
-  "timestampMs": 44130,
-  "confidence": 1.0
+  "text": "or in your phone's",
+  "startMs": 131294,
+  "endMs": 132539,
+  "timestampMs": 131294,
+  "confidence": 1
  },
  {
-  "text": "aprender",
-  "startMs": 44210,
-  "endMs": 44450,
-  "timestampMs": 44210,
-  "confidence": 1.0
+  "text": "storage.",
+  "startMs": 132539,
+  "endMs": 133293,
+  "timestampMs": 132539,
+  "confidence": 1
  },
  {
-  "text": "inglês.",
-  "startMs": 44450,
-  "endMs": 44810,
-  "timestampMs": 44450,
-  "confidence": 1.0
+  "text": "That gets you no",
+  "startMs": 133547,
+  "endMs": 134383,
+  "timestampMs": 133547,
+  "confidence": 1
+ },
+ {
+  "text": "results at all.",
+  "startMs": 134383,
+  "endMs": 135367,
+  "timestampMs": 134383,
+  "confidence": 1
+ },
+ {
+  "text": "To prove competence:",
+  "startMs": 135580,
+  "endMs": 137168,
+  "timestampMs": 135580,
+  "confidence": 1
+ },
+ {
+  "text": "real projects.",
+  "startMs": 137168,
+  "endMs": 138540,
+  "timestampMs": 137168,
+  "confidence": 1
+ },
+ {
+  "text": "Ship a small real",
+  "startMs": 138540,
+  "endMs": 139466,
+  "timestampMs": 138540,
+  "confidence": 1
+ },
+ {
+  "text": "project to production,",
+  "startMs": 139466,
+  "endMs": 140663,
+  "timestampMs": 139466,
+  "confidence": 1
+ },
+ {
+  "text": "something cool,",
+  "startMs": 140663,
+  "endMs": 141480,
+  "timestampMs": 140663,
+  "confidence": 1
+ },
+ {
+  "text": "with at least",
+  "startMs": 141480,
+  "endMs": 142323,
+  "timestampMs": 141480,
+  "confidence": 1
+ },
+ {
+  "text": "one person using it.",
+  "startMs": 142323,
+  "endMs": 143820,
+  "timestampMs": 142323,
+  "confidence": 1
+ },
+ {
+  "text": "You know,",
+  "startMs": 144020,
+  "endMs": 144518,
+  "timestampMs": 144020,
+  "confidence": 1
+ },
+ {
+  "text": "someone using it.",
+  "startMs": 144518,
+  "endMs": 145740,
+  "timestampMs": 144518,
+  "confidence": 1
+ },
+ {
+  "text": "That's the ideal.",
+  "startMs": 145740,
+  "endMs": 146780,
+  "timestampMs": 145740,
+  "confidence": 1
+ },
+ {
+  "text": "Anyway, that's it.",
+  "startMs": 146780,
+  "endMs": 147660,
+  "timestampMs": 146780,
+  "confidence": 1
+ },
+ {
+  "text": "I just",
+  "startMs": 147660,
+  "endMs": 147907,
+  "timestampMs": 147660,
+  "confidence": 1
+ },
+ {
+  "text": "wanted to demystify",
+  "startMs": 147907,
+  "endMs": 148688,
+  "timestampMs": 147907,
+  "confidence": 1
+ },
+ {
+  "text": "this point,",
+  "startMs": 148688,
+  "endMs": 149260,
+  "timestampMs": 148688,
+  "confidence": 1
+ },
+ {
+  "text": "because there",
+  "startMs": 149260,
+  "endMs": 150138,
+  "timestampMs": 149260,
+  "confidence": 1
+ },
+ {
+  "text": "are lots",
+  "startMs": 150138,
+  "endMs": 150678,
+  "timestampMs": 150138,
+  "confidence": 1
+ },
+ {
+  "text": "of conspiracy",
+  "startMs": 150678,
+  "endMs": 151555,
+  "timestampMs": 150678,
+  "confidence": 1
+ },
+ {
+  "text": "theories about",
+  "startMs": 151555,
+  "endMs": 152500,
+  "timestampMs": 151555,
+  "confidence": 1
+ },
+ {
+  "text": "getting into IT.",
+  "startMs": 152500,
+  "endMs": 153940,
+  "timestampMs": 152500,
+  "confidence": 1
+ },
+ {
+  "text": "But in the end,",
+  "startMs": 153940,
+  "endMs": 154745,
+  "timestampMs": 153940,
+  "confidence": 1
+ },
+ {
+  "text": "if you have",
+  "startMs": 154745,
+  "endMs": 155336,
+  "timestampMs": 154745,
+  "confidence": 1
+ },
+ {
+  "text": "no contacts,",
+  "startMs": 155336,
+  "endMs": 155980,
+  "timestampMs": 155336,
+  "confidence": 1
+ },
+ {
+  "text": "no network,",
+  "startMs": 155980,
+  "endMs": 156640,
+  "timestampMs": 155980,
+  "confidence": 1
+ },
+ {
+  "text": "no visibility,",
+  "startMs": 156640,
+  "endMs": 157480,
+  "timestampMs": 156640,
+  "confidence": 1
+ },
+ {
+  "text": "you get nothing.",
+  "startMs": 157480,
+  "endMs": 158640,
+  "timestampMs": 157480,
+  "confidence": 1
  }
 ]

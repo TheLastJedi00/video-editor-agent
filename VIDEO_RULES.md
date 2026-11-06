@@ -104,22 +104,36 @@ desenhados.
 
 ### Formato
 
-- Vertical **9:16, 1080×1920**, 30 fps. Duração de 15–90 s, a não ser que o usuário peça outra.
-- Se o vídeo de origem for longo, proponha os trechos mais fortes (com timestamps) e deixe o
-  usuário escolher antes de editar.
+- Vertical **9:16, 1080×1920**, 30 fps. Duração de até **3 min** (limite do Instagram Reels),
+  a não ser que o usuário peça outra. Vídeo de origem dentro desse limite (depois dos jump
+  cuts) é editado inteiro.
+- Se o vídeo de origem passar de 3 min, proponha os trechos mais fortes (com timestamps) e
+  deixe o usuário escolher antes de editar.
 - **Gancho nos primeiros 2 s:** a frase mais forte ou a promessa do vídeo, com texto na tela.
 - Cortes secos: remova silêncios, hesitações e repetições (jump cuts).
+- **Corte do respiro após cada frase:** os silêncios depois de cada frase saem sempre, para
+  acelerar o ritmo e prender a atenção, **sem comer o fim da palavra**. Corte pelos timestamps
+  de palavra do Whisper, que costumam marcar o fim da palavra cedo demais: mantenha ~120 ms
+  antes da primeira palavra e **~280 ms depois da última** palavra de cada frase, e emende na
+  próxima. Dentro da frase, só pausas acima de ~450 ms são encurtadas. Trechos que se tocam
+  depois da folga viram um só (nunca repetir áudio). Ouça os cortes das palavras que terminam
+  em consoante fraca ou vogal arrastada ("-s", "-r", "-m", "né", "tá").
 - Loudness: −14 LUFS. Voz sempre inteligível, com música de fundo em ducking se houver trilha.
 - Final com CTA curto e logo da identidade.
 
 ### Legendas dinâmicas
 
-- Grandes e centralizadas (~6–8% da altura), 2 a 4 palavras por vez, fonte display da
-  identidade em peso 700+.
+- Grandes e centralizadas, mas sem dominar o quadro: ~4,5% da altura (≈ 84px em 1920), 2 a 4
+  palavras por vez, fonte display da identidade em peso 700+.
 - **Palavra ativa destacada** na cor de acento, com pop de entrada (escala 0.9 → 1.05 → 1 em
   ~150 ms). Palavras-chave podem ganhar caixa, sublinhado animado ou ícone.
 - Sincronizadas por palavra (timestamps do Whisper). Ver a skill `caption-animation`.
 - Contorno ou sombra forte para ler sobre qualquer fundo.
+- **Longe do rosto:** a legenda (principal + secundária) nunca chega perto do rosto. Deixe
+  ≥ ~250px entre o queixo (no maior zoom) e o topo do bloco de legenda. Punch-ins e
+  alternância de enquadramento crescem a partir da linha do queixo (`transform-origin` na
+  altura do queixo), para o rosto nunca descer em direção à legenda. Se faltar espaço, a
+  legenda desce até ~340px da base e diminui, em vez de subir para perto do rosto.
 - **Área segura:** fora dos ~250px do topo, dos ~420px de baixo e dos ~120px da direita, onde
   ficam a interface do app e os botões.
 

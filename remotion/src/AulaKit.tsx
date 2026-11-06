@@ -101,6 +101,51 @@ export const ICONS: Record<string, React.ReactNode> = {
     </>
   ),
   cloud: <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />,
+  search: (
+    <>
+      <circle cx="11" cy="11" r="8" />
+      <path d="m21 21-4.3-4.3" />
+    </>
+  ),
+  monitor: (
+    <>
+      <rect width="20" height="14" x="2" y="3" rx="2" />
+      <path d="M8 21h8M12 17v4" />
+    </>
+  ),
+  terminal: (
+    <>
+      <polyline points="4 17 10 11 4 5" />
+      <path d="M12 19h8" />
+    </>
+  ),
+  calendar: (
+    <>
+      <rect width="18" height="18" x="3" y="4" rx="2" />
+      <path d="M16 2v4M8 2v4M3 10h18" />
+    </>
+  ),
+  ban: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="m4.9 4.9 14.2 14.2" />
+    </>
+  ),
+  message: <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />,
+  download: (
+    <>
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <path d="M12 15V3" />
+    </>
+  ),
+  layers: (
+    <>
+      <path d="m12 2 10 5-10 5L2 7z" />
+      <path d="m2 17 10 5 10-5" />
+      <path d="m2 12 10 5 10-5" />
+    </>
+  ),
   laptop: (
     <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
   ),
@@ -182,6 +227,49 @@ export const Panel: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     </div>
   );
 };
+
+// A compact card over an empty area of a screen recording (no presenter shrink). `box` is the free
+// rectangle in frame pixels; the card hugs its top-left and never grows past it.
+export const Callout: React.FC<{
+  box: { x: number; y: number; w: number; h: number };
+  children: React.ReactNode;
+}> = ({ box, children }) => {
+  const t = useT();
+  const { from, to } = useContext(InsertCtx);
+  const p = enter(t, from, 0.32) * exitP(t, to);
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: box.x,
+        top: box.y,
+        width: box.w,
+        maxHeight: box.h,
+        overflow: "hidden",
+        background: L.card,
+        border: `1px solid ${L.cardBorder}`,
+        borderRadius: 24,
+        boxShadow: `${SHADOW}, ${GLOW}`,
+        padding: "20px 24px 22px",
+        display: "flex",
+        flexDirection: "column",
+        gap: 12,
+        opacity: p,
+        transform: p < 1 ? `translateY(${(1 - p) * 16}px) scale(${0.94 + 0.06 * p})` : "none",
+        transformOrigin: "top left",
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
+// A small dark terminal strip for callouts
+export const MiniCode: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div style={{ background: L.dark, borderRadius: 16, padding: "8px 6px", display: "flex", flexDirection: "column", gap: 2 }}>
+    {children}
+  </div>
+);
 
 export const Appear: React.FC<{ at: number; children: React.ReactNode; popIn?: boolean; style?: React.CSSProperties }> = ({
   at,

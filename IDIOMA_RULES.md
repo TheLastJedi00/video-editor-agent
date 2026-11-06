@@ -51,7 +51,7 @@ A secundária apoia a principal sem competir com ela.
 
 | | Aula | Reels |
 |---|---|---|
-| Tamanho | ~70% da principal (≈ 28–30px em 1080p) | ~40% da principal (≈ 44–48px em 1080×1920) |
+| Tamanho | ~70% da principal (≈ 28–30px em 1080p) | ~45–50% da principal (≈ 38–42px em 1080×1920) |
 | Fonte | fonte de corpo da identidade, peso 400–500 | fonte de corpo da identidade, peso 500 |
 | Cor | texto principal da identidade com opacidade ~80% | texto principal com opacidade ~85% |
 | Contraste | o mesmo véu/caixa da principal, se houver; senão sombra suave | sombra suave (sem o contorno grosso da principal) |

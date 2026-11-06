@@ -11,11 +11,13 @@ const BRIDGE = 600; // blocks closer than this keep the card on screen between t
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
 // Discreet Aula caption in a Liga Dev white card: English main line, pt-BR secondary line inside it
-export const AulaCaptions: React.FC<{ subs: AulaSub[]; centerX: number; maxWidth: number }> = ({
-  subs,
-  centerX,
-  maxWidth,
-}) => {
+export const AulaCaptions: React.FC<{
+  subs: AulaSub[];
+  centerX: number;
+  maxWidth: number;
+  bottom?: number;
+  size?: number; // main line px; the secondary line is ~70% of it
+}> = ({ subs, centerX, maxWidth, bottom = 40, size = 40 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const ms = (frame / fps) * 1000;
@@ -41,7 +43,7 @@ export const AulaCaptions: React.FC<{ subs: AulaSub[]; centerX: number; maxWidth
     <div
       style={{
         position: "absolute",
-        bottom: 40,
+        bottom,
         left: centerX - maxWidth / 2,
         width: maxWidth,
         display: "flex",
@@ -55,7 +57,7 @@ export const AulaCaptions: React.FC<{ subs: AulaSub[]; centerX: number; maxWidth
           border: `1px solid ${L.cardBorder}`,
           borderRadius: 24,
           boxShadow: SHADOW,
-          padding: "14px 30px 16px",
+          padding: `${Math.round(size * 0.3)}px 30px ${Math.round(size * 0.35)}px`,
           maxWidth: "100%",
           textAlign: "center",
         }}
@@ -65,10 +67,10 @@ export const AulaCaptions: React.FC<{ subs: AulaSub[]; centerX: number; maxWidth
             style={{
               fontFamily: archivo,
               fontWeight: 600,
-              fontSize: 40,
+              fontSize: size,
               lineHeight: 1.25,
               color: L.text,
-              maxWidth: 900,
+              maxWidth: Math.max(900, maxWidth - 60),
               margin: "0 auto",
             }}
           >
@@ -76,14 +78,13 @@ export const AulaCaptions: React.FC<{ subs: AulaSub[]; centerX: number; maxWidth
           </div>
           <div
             style={{
-              marginTop: 12,
               fontFamily: archivo,
               fontWeight: 500,
-              fontSize: 28,
+              fontSize: Math.round(size * 0.7),
               lineHeight: 1.3,
               color: L.text2,
-              maxWidth: 900,
-              margin: "12px auto 0",
+              maxWidth: Math.max(900, maxWidth - 60),
+              margin: `${Math.round(size * 0.25)}px auto 0`,
             }}
           >
             {cur.pt}

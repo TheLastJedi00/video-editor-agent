@@ -1,614 +1,488 @@
 [
  {
-  "startMs": 270,
-  "endMs": 5100,
-  "en": "Hey everyone! Leno here. Today we'll talk about a must-know topic",
-  "pt": "Fala, galera! Leno aqui. E hoje a gente vai falar sobre um assunto obrigatório"
+  "startMs": 300,
+  "endMs": 2000,
+  "en": "Hey everyone! Leno here.",
+  "pt": "Fala, galera! Leno aqui."
  },
  {
-  "startMs": 5190,
-  "endMs": 11270,
-  "en": "to start building more complex projects and save that progress.",
-  "pt": "para a gente começar a desenvolver projetos mais complexos e conseguir salvar esse progresso."
+  "startMs": 2380,
+  "endMs": 6570,
+  "en": "Continuing, to wrap up this stage where we create,",
+  "pt": "E continuando, pra finalizar aqui, né, essa etapa da gente criando,"
  },
  {
-  "startMs": 11370,
-  "endMs": 15300,
-  "en": "Not just saving that progress, but evolving it over time",
-  "pt": "Não só salvar esse progresso, como conseguir evoluir ele ao longo do tempo,"
+  "startMs": 6620,
+  "endMs": 9320,
+  "en": "set up Git and make our first push,",
+  "pt": "configurando o Git até fazer o nosso primeiro push,"
  },
  {
-  "startMs": 15430,
-  "endMs": 19770,
-  "en": "and going back if something goes wrong.",
-  "pt": "conseguir voltar atrás caso dê alguma coisa errada."
+  "startMs": 9480,
+  "endMs": 12130,
+  "en": "we need to understand a bit about GitHub.",
+  "pt": "a gente vai ter que entender um pouquinho aqui do GitHub."
  },
  {
-  "startMs": 20590,
-  "endMs": 23600,
-  "en": "And that topic is code versioning.",
-  "pt": "E esse assunto é versionamento de código."
+  "startMs": 12180,
+  "endMs": 14850,
+  "en": "First we need to create a remote repository.",
+  "pt": "A gente tem que criar primeiro um repositório remoto, tá?"
  },
  {
-  "startMs": 23670,
-  "endMs": 25900,
-  "en": "When we talk about code versioning,",
-  "pt": "E quando a gente fala de versionamento de código,"
+  "startMs": 14900,
+  "endMs": 16670,
+  "en": "So I'll create a new repository here:",
+  "pt": "Então eu vou criar aqui, ó, o new repository:"
  },
  {
-  "startMs": 25950,
-  "endMs": 30110,
-  "en": "we think of a few tools developers use to version code.",
-  "pt": "a gente lembra de algumas ferramentas que o desenvolvedor usa para versionar código."
+  "startMs": 16720,
+  "endMs": 19180,
+  "en": "I clicked the plus button, New repository,",
+  "pt": "eu vim aqui no botãozinho de mais, new repository,"
  },
  {
-  "startMs": 30430,
-  "endMs": 34390,
-  "en": "The first must-have tool is Git. The standard.",
-  "pt": "A primeira ferramenta obrigatória é o Git. Padrão."
+  "startMs": 19300,
+  "endMs": 23703,
+  "en": "and I'll give it a name, for example aula-poo. Create.",
+  "pt": "e eu vou dar um nome pra ele, por exemplo, aula-poo. Create."
  },
  {
-  "startMs": 34950,
-  "endMs": 36450,
-  "en": "So what is Git?",
-  "pt": "E o que é o Git?"
+  "startMs": 23753,
+  "endMs": 26233,
+  "en": "I don't check anything here. Just Create.",
+  "pt": "Não marco nada aqui, tá? Só create."
  },
  {
-  "startMs": 36550,
-  "endMs": 42090,
-  "en": "Git is simply the guy that saves my change history.",
-  "pt": "O Git nada mais, nada menos é do que o cara que salva o meu histórico de alterações."
+  "startMs": 27833,
+  "endMs": 29243,
+  "en": "Great, it gave me this link",
+  "pt": "Beleza, ele me deu esse link aqui"
  },
  {
-  "startMs": 42830,
-  "endMs": 46790,
-  "en": "Say I have a project with all kinds of files.",
-  "pt": "Então, digamos que eu tenha um projeto que tem arquivos diversos."
+  "startMs": 29293,
+  "endMs": 31713,
+  "en": "and I'll copy this URL.",
+  "pt": "e eu vou copiar essa URL aqui, tá?"
  },
  {
-  "startMs": 47050,
-  "endMs": 53430,
-  "en": "Git will follow how those files evolve and alert me if...",
-  "pt": "O Git vai acompanhar o andamento desses arquivos e vai alertar se..."
+  "startMs": 31973,
+  "endMs": 33643,
+  "en": "I have my local repository,",
+  "pt": "Eu tenho meu repositório local,"
  },
  {
-  "startMs": 53670,
-  "endMs": 56070,
-  "en": "...they're all properly versioned.",
-  "pt": "Se todos estão devidamente versionados."
+  "startMs": 33693,
+  "endMs": 36563,
+  "en": "now I want to add a remote repository.",
+  "pt": "agora eu quero adicionar um repositório remoto."
  },
  {
-  "startMs": 57150,
-  "endMs": 61970,
-  "en": "And whether the project's whole history matches.",
-  "pt": "E se todo o histórico desse projeto bate."
+  "startMs": 36613,
+  "endMs": 40243,
+  "en": "So: git remote add.",
+  "pt": "Então: git remote add."
  },
  {
-  "startMs": 62350,
-  "endMs": 64130,
-  "en": "Whether it's OK, whether it's correct.",
-  "pt": "Se ele está ok, se ele está correto."
+  "startMs": 40293,
+  "endMs": 43203,
+  "en": "We'll add an origin,",
+  "pt": "A gente vai adicionar uma origem,"
  },
  {
-  "startMs": 65130,
-  "endMs": 68850,
-  "en": "It also lets me create several parallel versions of my project",
-  "pt": "Também vai permitir que eu crie várias versões em paralelo do meu projeto,"
+  "startMs": 43253,
+  "endMs": 45783,
+  "en": "and the origin is exactly my link here.",
+  "pt": "e a origem é justamente o meu link aqui, ó."
  },
  {
-  "startMs": 68970,
-  "endMs": 71230,
-  "en": "so I don't have to keep changing what works.",
-  "pt": "para que eu não precise ficar alterando o que funciona."
+  "startMs": 45833,
+  "endMs": 49253,
+  "en": "This is the command to sync local with remote.",
+  "pt": "Esse aqui é o comando pra sincronizar o local com o remoto."
  },
  {
-  "startMs": 71410,
-  "endMs": 74590,
-  "en": "Speaking of which, we first need to understand the concept of versioning.",
-  "pt": "E falando sobre isso, a gente tem que entender primeiro o conceito de versionamento."
+  "startMs": 49733,
+  "endMs": 51983,
+  "en": "Well, not sync: we'll create a link,",
+  "pt": "Sincronizar não, né: a gente vai criar um link,"
  },
  {
-  "startMs": 75070,
-  "endMs": 77900,
-  "en": "Code versioning is about...",
-  "pt": "O versionamento de código, ele se trata de..."
+  "startMs": 52033,
+  "endMs": 53993,
+  "en": "but we'll need to send things there later.",
+  "pt": "mas a gente vai precisar mandar pra lá depois."
  },
  {
-  "startMs": 77970,
-  "endMs": 83410,
-  "en": "If my code works right now and I want to add a new function, a new...",
-  "pt": "Se o meu código funciona atualmente e eu quero implementar uma nova função, uma nova..."
+  "startMs": 54593,
+  "endMs": 55913,
+  "en": "Done, I created the link.",
+  "pt": "Pronto, criei o link."
  },
  {
-  "startMs": 83670,
-  "endMs": 85110,
-  "en": "A new module, something like that.",
-  "pt": "Um novo módulo, algo do tipo."
+  "startMs": 56773,
+  "endMs": 60933,
+  "en": "The point is, we'll talk a little about branches.",
+  "pt": "O ponto aqui é que a gente vai falar um pouquinho de branch."
  },
  {
-  "startMs": 85450,
-  "endMs": 91390,
-  "en": "I need to make sure I can go back if something goes wrong.",
-  "pt": "Eu preciso garantir que, se eu precisar voltar atrás, caso dê errado, eu consiga."
+  "startMs": 61453,
+  "endMs": 63093,
+  "en": "Just a little.",
+  "pt": "Bem pouco mesmo."
  },
  {
-  "startMs": 91490,
-  "endMs": 96830,
-  "en": "I also need to make sure every one of those steps is being saved.",
-  "pt": "E eu também preciso garantir que todos esses passos estejam sendo salvos."
+  "startMs": 63233,
+  "endMs": 67173,
+  "en": "A Git project can have branches.",
+  "pt": "Existem ramificações possíveis dentro de um projeto Git."
  },
  {
-  "startMs": 96930,
-  "endMs": 101370,
-  "en": "And that I can see each step and work between them.",
-  "pt": "E eu consiga ver cada um desses passos para trabalhar ali entre eles."
+  "startMs": 67353,
+  "endMs": 70543,
+  "en": "We can have a main path for our project",
+  "pt": "Então a gente pode ter um caminho principal do nosso projeto"
  },
  {
-  "startMs": 101650,
-  "endMs": 104050,
-  "en": "And that's code versioning. Got it?",
-  "pt": "E isso é versionamento de código. Perfeito?"
+  "startMs": 70593,
+  "endMs": 73783,
+  "en": "and open parallel paths to run tests,",
+  "pt": "e pode abrir caminhos em paralelo pra fazer testes,"
  },
  {
-  "startMs": 104430,
-  "endMs": 109390,
-  "en": "So when do we version code? How do we start doing it?",
-  "pt": "E quando a gente versiona o código? Como é que a gente começa a fazer isso?"
+  "startMs": 73833,
+  "endMs": 76783,
+  "en": "add new functions without breaking what already works, OK?",
+  "pt": "adicionar novas funções sem quebrar o que já funciona, ok?"
  },
  {
-  "startMs": 109630,
-  "endMs": 115600,
-  "en": "First I'll explain the stages of... versioning. The stages of...",
-  "pt": "Eu vou explicar primeiro aqui, etapas do... Versionamento. Etapas do..."
+  "startMs": 76833,
+  "endMs": 85563,
+  "en": "The point is that, by default, Git names",
+  "pt": "O ponto aqui é que, por padrão, o Git, ele nomeia, né,"
  },
  {
-  "startMs": 115650,
-  "endMs": 118170,
-  "en": "The life cycle of your files.",
-  "pt": "O ciclo de vida dos arquivos de vocês."
+  "startMs": 85613,
+  "endMs": 87483,
+  "en": "this main path master,",
+  "pt": "esse caminho principal de master,"
  },
  {
-  "startMs": 118370,
-  "endMs": 122600,
-  "en": "So if you have a project with a file",
-  "pt": "Então, se vocês têm um projeto que tem um arquivo,"
+  "startMs": 87533,
+  "endMs": 91193,
+  "en": "but GitHub recommends we use main.",
+  "pt": "mas o GitHub recomenda que a gente use main."
  },
  {
-  "startMs": 122690,
-  "endMs": 127330,
-  "en": "and you start Git in it, you create a repository.",
-  "pt": "e vocês iniciam um Git nele, vocês criam um repositório."
+  "startMs": 91333,
+  "endMs": 96307,
+  "en": "So we'll rename our main path to main in our Git.",
+  "pt": "Então a gente vai ter que trocar aqui no nosso Git o nome do nosso caminho principal pra main."
  },
  {
-  "startMs": 127490,
-  "endMs": 132510,
-  "en": "And that repository is... what makes it a repository, right?",
-  "pt": "E esse repositório é o... O que caracteriza um repositório, né?"
+  "startMs": 96527,
+  "endMs": 100977,
+  "en": "So I'll call git branch -m, to rename,",
+  "pt": "Então eu vou chamar git branch -m, pra renomear,"
  },
  {
-  "startMs": 132610,
-  "endMs": 135870,
-  "en": "It's the whole scope of my project that Git is watching.",
-  "pt": "É justamente todo o escopo do meu projeto que o Git está assistindo."
+  "startMs": 101027,
+  "endMs": 102967,
+  "en": "and change the name to main.",
+  "pt": "e aí eu troco o nome pra main, ó."
  },
  {
-  "startMs": 135970,
-  "endMs": 139970,
-  "en": "So when I start Git, my project automatically becomes a repository.",
-  "pt": "Então, quando eu inicio o Git, automaticamente o meu projeto passa a ser um repositório."
+  "startMs": 103487,
+  "endMs": 104687,
+  "en": "Done, renamed.",
+  "pt": "Pronto, renomeei."
  },
  {
-  "startMs": 140290,
-  "endMs": 142800,
-  "en": "Got it? What do I need to do now?",
-  "pt": "Perfeito? O que eu preciso fazer agora?"
+  "startMs": 105067,
+  "endMs": 108257,
+  "en": "Now the names match. If I want to check the actual name,",
+  "pt": "Agora os nomes estão batendo. Se eu quiser dar uma olhada aqui no nome real,"
  },
  {
-  "startMs": 142870,
-  "endMs": 146110,
-  "en": "I need to understand the life cycle of these files.",
-  "pt": "Eu preciso entender o ciclo de vida desses arquivos."
+  "startMs": 108307,
+  "endMs": 109947,
+  "en": "I call git branch here.",
+  "pt": "eu chamo o git branch aqui, ó."
  },
  {
-  "startMs": 146230,
-  "endMs": 151600,
-  "en": "So when I start a repository, the files that existed before I started Git",
-  "pt": "Então, quando eu inicio um repositório, os arquivos que tinha antes de eu iniciar o Git,"
+  "startMs": 110387,
+  "endMs": 113797,
+  "en": "It shows me I'm on main, so now it's right.",
+  "pt": "Ele me mostra aqui, ó: tô na main, então agora tá certo."
  },
  {
-  "startMs": 151690,
-  "endMs": 154910,
-  "en": "become untracked.",
-  "pt": "eles passam a ser untracked."
+  "startMs": 113847,
+  "endMs": 115467,
+  "en": "OK. OK.",
+  "pt": "Tá. Tá."
  },
  {
-  "startMs": 155150,
-  "endMs": 159330,
-  "en": "Because Git didn't see that file being created.",
-  "pt": "Porque o Git não viu a criação daquele arquivo."
+  "startMs": 115607,
+  "endMs": 120887,
+  "en": "And I'll do a git push to push my local repository to the cloud.",
+  "pt": "E eu vou fazer um git push pra empurrar o meu repositório local pra nuvem."
  },
  {
-  "startMs": 159990,
-  "endMs": 162070,
-  "en": "It didn't watch that file being created.",
-  "pt": "Ele não assistiu a criação daquele arquivo."
+  "startMs": 121007,
+  "endMs": 124687,
+  "en": "But I have to say I want to push to origin.",
+  "pt": "Só que eu tenho que dizer que eu quero empurrar pra origin."
  },
  {
-  "startMs": 162170,
-  "endMs": 165310,
-  "en": "So it was never tracked. It's untracked.",
-  "pt": "Então, ele nunca foi trackeado. Ele é untracked."
+  "startMs": 124907,
+  "endMs": 127977,
+  "en": "See how I added origin, which is the link here?",
+  "pt": "Tá vendo que eu adicionei origin, que é o link aqui?"
  },
  {
-  "startMs": 165690,
-  "endMs": 172010,
-  "en": "Here's the interesting part... We'll use an analogy of a...",
-  "pt": "O ponto aqui interessante é que... A gente vai usar uma analogia de uma..."
+  "startMs": 128027,
+  "endMs": 131847,
+  "en": "Right. Origin, and the branch name, main.",
+  "pt": "Pois é. Origin, e o nome da branch, main."
  },
  {
-  "startMs": 172610,
-  "endMs": 176000,
-  "en": "So something untracked",
-  "pt": "Então, algo que é untracked,"
+  "startMs": 134113,
+  "endMs": 135443,
+  "en": "It's sent.",
+  "pt": "Ele enviou, tá?"
  },
  {
-  "startMs": 176070,
-  "endMs": 179490,
-  "en": "is something I haven't even put in my shopping cart yet.",
-  "pt": "é algo que eu nem botei no meu carrinho de compras ainda."
+  "startMs": 135493,
+  "endMs": 138553,
+  "en": "At this step it might ask you to log in.",
+  "pt": "Pode ser que nessa etapa aqui ele vá pedir pra vocês logarem, tá?"
  },
  {
-  "startMs": 180310,
-  "endMs": 184770,
-  "en": "But I intend to. So the idea is to close that purchase.",
-  "pt": "Mas, eu tenho a pretensão de colocar. Então, a ideia é a gente fechar essa compra."
+  "startMs": 138793,
+  "endMs": 141753,
+  "en": "Then you just log in with GitHub as usual.",
+  "pt": "E aí vocês só fazem o login de vocês com o GitHub normal."
  },
  {
-  "startMs": 185130,
-  "endMs": 189010,
-  "en": "Got it? To fully version our project's progress.",
-  "pt": "Perfeito? A gente conseguir versionar totalmente o andamento do nosso projeto."
+  "startMs": 142113,
+  "endMs": 146303,
+  "en": "Now I'll go to the repository and hit F5 on the page,",
+  "pt": "E agora eu vou lá no repositório, vou dar um F5 aqui na página,"
  },
  {
-  "startMs": 189510,
-  "endMs": 191200,
-  "en": "Each new file I create",
-  "pt": "Cada arquivo novo que eu vou criando"
+  "startMs": 146353,
+  "endMs": 148123,
+  "en": "check it out: my whole project is here,",
+  "pt": "saca só: todo o meu projeto veio pra cá,"
  },
  {
-  "startMs": 191290,
-  "endMs": 193990,
-  "en": "can be a different item on my shopping list.",
-  "pt": "pode ser um item diferente da minha lista de compras."
+  "startMs": 148173,
+  "endMs": 151593,
+  "en": "almost instantly, without dragging any files.",
+  "pt": "quase que instantaneamente, sem precisar ficar arrastando arquivo."
  },
  {
-  "startMs": 194070,
-  "endMs": 197500,
-  "en": "But if I never tracked the file,",
-  "pt": "Só que, se eu nunca trackeei o arquivo,"
+  "startMs": 152773,
+  "endMs": 156243,
+  "en": "There's main, and ContaCorrente here, OK?",
+  "pt": "Ó a main, olha a ContaCorrente aqui, ok?"
  },
  {
-  "startMs": 197630,
-  "endMs": 202050,
-  "en": "I haven't even put that item from my list in my cart.",
-  "pt": "nem no meu carrinho eu coloquei aquele objeto, aquele item na minha lista de compras."
+  "startMs": 156293,
+  "endMs": 158793,
+  "en": "So that's the push step.",
+  "pt": "Então esse aqui é o passo do push."
  },
  {
-  "startMs": 202190,
-  "endMs": 205970,
-  "en": "Got it? Then we use a command called git add.",
-  "pt": "Perfeito? E aí, a gente usa um comando chamado git add."
+  "startMs": 159433,
+  "endMs": 165293,
+  "en": "Let's say I make a change from another computer.",
+  "pt": "Digamos que eu faço uma alteração de outro computador."
  },
  {
-  "startMs": 207590,
-  "endMs": 211630,
-  "en": "After add, I write the name of the file I want to track.",
-  "pt": "E aí, depois do add, eu falo o nome do arquivo que eu quero trackear."
+  "startMs": 165453,
+  "endMs": 167073,
+  "en": "I'll simulate it here.",
+  "pt": "Eu vou simular aqui, ó."
  },
  {
-  "startMs": 212230,
-  "endMs": 215330,
-  "en": "Including the extension, for example, main.java.",
-  "pt": "Inclusive, com a extensão, por exemplo, main.java."
+  "startMs": 167453,
+  "endMs": 170543,
+  "en": "I go to main and edit the file,",
+  "pt": "Vou lá na main, eu vou editar o arquivo,"
  },
  {
-  "startMs": 215950,
-  "endMs": 219350,
-  "en": "The point we want to get to is...",
-  "pt": "O ponto que a gente quer chegar é que..."
+  "startMs": 170593,
+  "endMs": 172773,
+  "en": "I'm on another computer using my code.",
+  "pt": "tô em outro computador aqui usando meu código."
  },
  {
-  "startMs": 219890,
-  "endMs": 222700,
-  "en": "if the project has lots of files,",
-  "pt": "Se for um projeto com muitos arquivos,"
+  "startMs": 172973,
+  "endMs": 176700,
+  "en": "Say I want to add a System.out here. I'll do it here.",
+  "pt": "Vamos supor que eu quero adicionar um System.out aqui, vou fazer aqui, ó."
  },
  {
-  "startMs": 222810,
-  "endMs": 226000,
-  "en": "it's not practical to write a git add",
-  "pt": "não é interessante eu escrever, fazer um git add"
+  "startMs": 176793,
+  "endMs": 183333,
+  "en": "Ctrl C, Ctrl V, quotes, “Funcionando”.",
+  "pt": "Ctrl C, Ctrl V, aspas, “Funcionando”."
  },
  {
-  "startMs": 226070,
-  "endMs": 228250,
-  "en": "every time I want to add a new file.",
-  "pt": "toda vez que eu quiser adicionar um novo arquivo."
+  "startMs": 184300,
+  "endMs": 187993,
+  "en": "Then I committed from the other computer and pushed.",
+  "pt": "E aí eu fiz um commit lá de outro computador, fiz o push, ó."
  },
  {
-  "startMs": 228430,
-  "endMs": 230950,
-  "en": "That's why, instead of writing git add",
-  "pt": "Por isso que a gente pode, ao invés de colocar git add"
+  "startMs": 189873,
+  "endMs": 194160,
+  "en": "Now, my remote repository… let's go back to the start.",
+  "pt": "Agora, o meu repositório remoto… vamos voltar aqui pro começo."
  },
  {
-  "startMs": 231010,
-  "endMs": 234110,
-  "en": "and the file name... we put a dot in place of the file name.",
-  "pt": "e o nome do arquivo... No lugar do nome do arquivo, a gente bota um ponto."
+  "startMs": 194960,
+  "endMs": 197020,
+  "en": "Let's click here to see the commits.",
+  "pt": "Vamos clicar aqui pra ver os commits."
  },
  {
-  "startMs": 234350,
-  "endMs": 237770,
-  "en": "So it becomes git add . Got it?",
-  "pt": "Então, fica git add . Perfeito?"
+  "startMs": 197860,
+  "endMs": 198767,
+  "en": "Oops.",
+  "pt": "Opa."
  },
  {
-  "startMs": 238330,
-  "endMs": 239690,
-  "en": "That's the first command.",
-  "pt": "Esse é o primeiro comando."
+  "startMs": 199820,
+  "endMs": 204420,
+  "en": "My remote repository has two commits:",
+  "pt": "O meu repositório remoto, ele tem dois commits:"
  },
  {
-  "startMs": 239750,
-  "endMs": 244690,
-  "en": "This way, you took those files and put them in your shopping cart.",
-  "pt": "Nessa forma, vocês pegaram aqueles arquivos e botaram no carrinho de compras de vocês."
+  "startMs": 204780,
+  "endMs": 210140,
+  "en": "the initial one, and this one where I added that little print at the end.",
+  "pt": "o initial e aqui esse momento que eu adicionei aquele printzinho no final do projeto."
  },
  {
-  "startMs": 244810,
-  "endMs": 248390,
-  "en": "The grocery items went into the cart. That's the first stage.",
-  "pt": "Os itens do supermercado foram para o carrinho de compras. É o primeiro estágio."
+  "startMs": 211340,
+  "endMs": 219580,
+  "en": "If I come to my local repository, it only has one commit.",
+  "pt": "Se eu vier no meu repositório local, ele só tem um commit."
  },
  {
-  "startMs": 249190,
-  "endMs": 252850,
-  "en": "But while it's in the cart, I might change my mind. Right?",
-  "pt": "Mas, no carrinho de compras, pode ser que eu mude de ideia. Né?"
+  "startMs": 221820,
+  "endMs": 223920,
+  "en": "I can't push anymore now,",
+  "pt": "Eu não consigo mais fazer push agora,"
  },
  {
-  "startMs": 253670,
-  "endMs": 257930,
-  "en": "What really closes the purchase is going through the checkout.",
-  "pt": "O que vai garantir, de fato, que eu feche aquela compra é quando eu passo no caixa."
+  "startMs": 224240,
+  "endMs": 227520,
+  "en": "because my remote is different from my local.",
+  "pt": "porque o meu remoto, ele tá diferente do local."
  },
  {
-  "startMs": 258270,
-  "endMs": 261670,
-  "en": "In Git, the equivalent is git commit.",
-  "pt": "E no Git, o equivalente a isso é o git commit."
+  "startMs": 227660,
+  "endMs": 231930,
+  "en": "To push something to the cloud, I first need to pull what's new there.",
+  "pt": "Então, pra eu poder empurrar algo pra nuvem, eu preciso primeiro puxar o que tem de novo lá."
  },
  {
-  "startMs": 262410,
-  "endMs": 265770,
-  "en": "And git commit asks me to write a message.",
-  "pt": "E o git commit, ele pede que eu escreva uma mensagem."
+  "startMs": 231980,
+  "endMs": 234470,
+  "en": "The command to pull: pull.",
+  "pt": "O comando pra puxar, né: pull."
  },
  {
-  "startMs": 266050,
-  "endMs": 268730,
-  "en": "Basically, there I can describe a bit of what I changed in the project.",
-  "pt": "Basicamente, ali eu posso relatar um pouco do que eu alterei no projeto."
+  "startMs": 234520,
+  "endMs": 240720,
+  "en": "So git pull from the remote origin, from the main branch,",
+  "pt": "Então git pull de onde tá a origem remota, né, da branch main,"
  },
  {
-  "startMs": 269030,
-  "endMs": 275510,
-  "en": "So it's git commit -m, to say I want to write a message.",
-  "pt": "Então, é git commit -m para definir que eu quero escrever uma mensagem ali."
+  "startMs": 240940,
+  "endMs": 242420,
+  "en": "which is the main path.",
+  "pt": "que é o caminho principal."
  },
  {
-  "startMs": 275630,
-  "endMs": 278210,
-  "en": "Then I open the quotes and start typing the message.",
-  "pt": "Então, eu abro as aspas e começo a digitar aquela mensagem."
+  "startMs": 243800,
+  "endMs": 246870,
+  "en": "Done. It added the changes here.",
+  "pt": "Pronto, ó. Ele adicionou aqui as mudanças."
  },
  {
-  "startMs": 278290,
-  "endMs": 281590,
-  "en": "Let's use the example \"initial commit\". My project's first commit.",
-  "pt": "Bora usar o exemplo aqui do initial commit. O primeiro commit do meu projeto."
+  "startMs": 246920,
+  "endMs": 252330,
+  "en": "And if I run git log now: two commits.",
+  "pt": "E se eu fizer um git log agora: dois commits."
  },
  {
-  "startMs": 281970,
-  "endMs": 285910,
-  "en": "Then I close the quotes and hit enter. The command runs. Got it?",
-  "pt": "E aí, eu fecho as aspas, dou um enter. E aquele comando roda. Perfeito?"
+  "startMs": 253920,
+  "endMs": 255700,
+  "en": "It synced with the cloud.",
+  "pt": "Ele sincronizou com a nuvem."
  },
  {
-  "startMs": 286510,
-  "endMs": 291700,
-  "en": "So this is the guy that... The commit is a snapshot of my project that it saves.",
-  "pt": "Então, esse é o cara que... O commit é a fotografia do meu projeto. Que ele vai salvar."
+  "startMs": 255860,
+  "endMs": 259990,
+  "en": "So: git push sends what I did locally to the cloud. Push.",
+  "pt": "Então: git push pra mandar o que eu fiz no local pra nuvem, empurrar."
  },
  {
-  "startMs": 291770,
-  "endMs": 294850,
-  "en": "It saves all the progress of my project.",
-  "pt": "Ele vai salvar todo o andamento daquele meu projeto."
+  "startMs": 260040,
+  "endMs": 264100,
+  "en": "And git pull brings it from the cloud to local. OK?",
+  "pt": "E o git pull pra puxar da nuvem pro local. Ok?"
  },
  {
-  "startMs": 294970,
-  "endMs": 297470,
-  "en": "Everything that was tracked is now versioned.",
-  "pt": "Tudo que foi trackeado, agora foi versionado."
+  "startMs": 264167,
+  "endMs": 265337,
+  "en": "That's it for today.",
+  "pt": "Por hoje, finalizamos."
  },
  {
-  "startMs": 298570,
-  "endMs": 302890,
-  "en": "If I have several commits, I have a history.",
-  "pt": "Se eu tenho vários commits, eu tenho um histórico."
+  "startMs": 265387,
+  "endMs": 269917,
+  "en": "This was our stage from setting up Git to the final step,",
+  "pt": "Então aqui foi a etapa do nosso configurando o Git até chegar na etapa final,"
  },
  {
-  "startMs": 304330,
-  "endMs": 309150,
-  "en": "If I try to compare... For example, imagine I want to...",
-  "pt": "Se eu tento comparar... Por exemplo, imagina que eu quero..."
+  "startMs": 269967,
+  "endMs": 273567,
+  "en": "making our first push, and our first pull too.",
+  "pt": "que é fazendo o nosso primeiro push, nosso primeiro pull também."
  },
  {
-  "startMs": 309210,
-  "endMs": 310650,
-  "en": "Two people are working on the same project.",
-  "pt": "Tem duas pessoas trabalhando no mesmo projeto."
+  "startMs": 274127,
+  "endMs": 279117,
+  "en": "As the projects go on, I'll bring more of what Git can do.",
+  "pt": "E com o passar dos projetos, eu vou trazer um pouco mais de coisas que o Git pode fazer."
  },
  {
-  "startMs": 311350,
-  "endMs": 313500,
-  "en": "But the guy working with me",
-  "pt": "Só que o carinha que estava trabalhando comigo,"
+  "startMs": 279167,
+  "endMs": 281047,
+  "en": "Especially branching.",
+  "pt": "Principalmente a questão de ramificação, tá?"
  },
  {
-  "startMs": 313570,
-  "endMs": 315310,
-  "en": "is one step behind in his commits.",
-  "pt": "ele está um passo atrás ali nos commits dele."
+  "startMs": 281207,
+  "endMs": 282797,
+  "en": "I'll make a dedicated video on branching.",
+  "pt": "Ramificação, eu vou fazer um vídeo dedicado sobre."
  },
  {
-  "startMs": 315710,
-  "endMs": 319790,
-  "en": "If I try to use Git to merge what he's doing with what I'm doing,",
-  "pt": "Se eu tento usar o Git para juntar o que ele está fazendo com o que eu estou fazendo,"
+  "startMs": 282847,
+  "endMs": 284807,
+  "en": "It'll be the last Git and GitHub video.",
+  "pt": "Vai ser o último vídeo de Git e GitHub."
  },
  {
-  "startMs": 320370,
-  "endMs": 323830,
-  "en": "Git doesn't compare only code. It compares the history.",
-  "pt": "o Git não compara... só código. Ele compara o histórico."
- },
- {
-  "startMs": 324190,
-  "endMs": 327710,
-  "en": "So if the history doesn't match, nothing matches for it.",
-  "pt": "Então, se o histórico não bate, nada bate para ele."
- },
- {
-  "startMs": 328250,
-  "endMs": 334030,
-  "en": "So ideally the whole history is always completely, perfectly aligned.",
-  "pt": "Então, o ideal é que todo o histórico sempre esteja totalmente, perfeitamente alinhado."
- },
- {
-  "startMs": 334370,
-  "endMs": 337070,
-  "en": "So versioning isn't just code.",
-  "pt": "Então, não é só código o versionamento."
- },
- {
-  "startMs": 337290,
-  "endMs": 339810,
-  "en": "It's also the history that guarantees code versioning.",
-  "pt": "É o histórico também, que garante o versionamento do código."
- },
- {
-  "startMs": 340250,
-  "endMs": 342750,
-  "en": "So we've seen add, to track, and we've seen commit.",
-  "pt": "Então, a gente viu aqui o add para trackear e viu o commit."
- },
- {
-  "startMs": 343710,
-  "endMs": 347850,
-  "en": "But there's another tool I want to tell you about: GitHub.",
-  "pt": "Só que aí tem outra ferramenta que eu quero falar para vocês. Que é o GitHub."
- },
- {
-  "startMs": 348310,
-  "endMs": 355050,
-  "en": "GitHub. GitHub is nothing more than... a social network where we put our code.",
-  "pt": "O GitHub. O GitHub nada mais é do que... Uma rede social onde a gente joga o nosso código."
- },
- {
-  "startMs": 355290,
-  "endMs": 358650,
-  "en": "And we use Git together with GitHub.",
-  "pt": "E a gente usa o Git em parceria com o GitHub."
- },
- {
-  "startMs": 359250,
-  "endMs": 364110,
-  "en": "So every time I want to version my project, I commit.",
-  "pt": "Então, toda vez que eu quero versionar o meu projeto, eu faço o commit."
- },
- {
-  "startMs": 365330,
-  "endMs": 366410,
-  "en": "Right. I commit.",
-  "pt": "Perfeito. Faço o commit."
- },
- {
-  "startMs": 366710,
-  "endMs": 369050,
-  "en": "But if I want to send it to the cloud,",
-  "pt": "Mas, se eu quiser mandar para a nuvem,"
- },
- {
-  "startMs": 369150,
-  "endMs": 372370,
-  "en": "I have to push it from my local repository to the cloud.",
-  "pt": "eu tenho que empurrar do meu repositório local para a nuvem."
- },
- {
-  "startMs": 372530,
-  "endMs": 377050,
-  "en": "And this command's name... Look: \"empurrar\" is push. git push.",
-  "pt": "E o nome desse comando... Olha só. Empurrar. Push. Git push."
- },
- {
-  "startMs": 377790,
-  "endMs": 381750,
-  "en": "If I want to pull from the cloud: git pull. I bring it to me.",
-  "pt": "Se eu quiser puxar da nuvem: git pull. Eu trago para mim."
- },
- {
-  "startMs": 382850,
-  "endMs": 388110,
-  "en": "This video is more theoretical, to map out what each thing is.",
-  "pt": "Esse vídeo é mais teórico para mapear um pouco para vocês o que é cada coisa."
- },
- {
-  "startMs": 388670,
-  "endMs": 390370,
-  "en": "So Git is my local repository.",
-  "pt": "Então, o Git é meu repositório local."
- },
- {
-  "startMs": 390690,
-  "endMs": 394690,
-  "en": "And GitHub is my social network where I publish my repositories.",
-  "pt": "E o GitHub é a minha rede social onde eu publico meus repositórios."
- },
- {
-  "startMs": 394910,
-  "endMs": 398770,
-  "en": "There they're saved publicly for anyone to access and even contribute.",
-  "pt": "E lá eles ficam salvos publicamente para quem quiser acessar e até participar."
- },
- {
-  "startMs": 399290,
-  "endMs": 402210,
-  "en": "We'll see more of this in other videos.",
-  "pt": "A gente vai ver um pouco mais disso em outros vídeos."
- },
- {
-  "startMs": 402630,
-  "endMs": 406530,
-  "en": "So this one is more of an intro. We'll see it in practice in the next one.",
-  "pt": "Então, esse aqui é mais uma introdução. E a gente vai ver na prática no próximo."
- },
- {
-  "startMs": 407090,
-  "endMs": 407800,
-  "en": "Thanks!",
-  "pt": "Valeu!"
+  "startMs": 285067,
+  "endMs": 287133,
+  "en": "So that's all for today. Thanks!",
+  "pt": "Então, por hoje é só. Valeu!"
  }
 ]

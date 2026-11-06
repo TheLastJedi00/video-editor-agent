@@ -28,7 +28,7 @@ if an earlier video in the same conversation used an answer. Do not probe, trans
 before the answers arrive.
 
 1. **Estilo do vídeo** (`VIDEO_RULES.md`): **Aula** (lecture, 16:9, full length, discreet
-   captions, infographics beside the presenter) or **Reels** (9:16 short-form, jump cuts, big
+   captions, infographics beside the presenter) or **Reels** (9:16 short-form, tight jump cuts with the silence after every phrase removed, big
    word-by-word captions, animations).
 2. **Identidade visual** (`VISUAL_RULES.md`): **BF Academy**, **Leno Borges** or **Liga Dev**.
 3. **Idioma prioritário da legenda** (`IDIOMA_RULES.md`): **Português** or **Inglês**. Captions

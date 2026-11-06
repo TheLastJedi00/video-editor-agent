@@ -51,17 +51,26 @@ export const toPages = (words: Caption[]): Page[] => {
   }));
 };
 
-const clean = (t: string) => t.replace(/[,.]$/, "");
+const clean = (t: string) => t.replace(/[,.:?!]$/, "");
 
 export const Captions: React.FC<{
   words: Caption[];
   emphasis: string[];
   secondary?: SubtitleSegment[];
-}> = ({ words, emphasis, secondary }) => {
+  // phrase blocks (translated primary): one Caption per block, no active-word highlight
+  blocks?: boolean;
+}> = ({ words, emphasis, secondary, blocks }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const ms = (frame / fps) * 1000;
-  const page = toPages(words).find((p) => ms >= p.startMs && ms < p.endMs);
+  const pages: Page[] = blocks
+    ? words.map((w) => ({
+        startMs: w.startMs,
+        endMs: w.endMs,
+        words: w.text.split(" ").map((t) => ({ ...w, text: t })),
+      }))
+    : toPages(words);
+  const page = pages.find((p) => ms >= p.startMs && ms < p.endMs);
   const sub = secondary?.find((s) => ms >= s.startMs && ms < s.endMs);
   if (!page && !sub) return null;
   const subOpacity = sub
@@ -84,13 +93,13 @@ export const Captions: React.FC<{
       <div
         style={{
           position: "absolute",
-          bottom: 420,
-          left: 80,
-          right: 160,
+          bottom: 340,
+          left: 60,
+          right: 140,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: 18,
+          gap: 10,
         }}
       >
         {page && (
@@ -99,17 +108,18 @@ export const Captions: React.FC<{
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "center",
-              gap: "0 22px",
+              gap: "0 16px",
               fontFamily: outfit,
               fontWeight: 800,
-              fontSize: 116,
+              fontSize: 76,
               lineHeight: 1.08,
               letterSpacing: "-0.02em",
               textAlign: "center",
             }}
           >
-            {page.words.map((w) => {
+            {page.words.map((w, i) => {
               const active =
+                !blocks &&
                 ms >= w.startMs && ms < Math.max(w.endMs, w.startMs + 120);
               const spoken = ms >= w.startMs;
               const t = (ms - w.startMs) / 150;
@@ -122,13 +132,13 @@ export const Captions: React.FC<{
               const key = emphasis.includes(clean(w.text).toLowerCase());
               return (
                 <span
-                  key={w.startMs}
+                  key={`${w.startMs}-${i}`}
                   style={{
                     display: "inline-block",
                     transform: `scale(${scale})`,
                     color: active || (key && spoken) ? C.blue : C.text,
                     opacity: spoken ? 1 : 0.55,
-                    WebkitTextStroke: `10px ${C.ink}`,
+                    WebkitTextStroke: `7px ${C.ink}`,
                     paintOrder: "stroke fill",
                     textShadow: "0 6px 24px rgba(0,0,0,0.55)",
                   }}
@@ -145,7 +155,7 @@ export const Captions: React.FC<{
               opacity: subOpacity * 0.85,
               fontFamily: dmSans,
               fontWeight: 500,
-              fontSize: 44,
+              fontSize: 36,
               lineHeight: 1.2,
               textAlign: "center",
               color: C.text,
