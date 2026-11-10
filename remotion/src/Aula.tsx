@@ -2,9 +2,9 @@ import React from "react";
 import { AbsoluteFill, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Video } from "@remotion/media";
 import { AulaCaptions } from "./AulaCaptions";
-import { AULA_CAPTION, AULA_DURATION, AULA_FULL, AULA_INSERTS, AULA_REDACT, AULA_SUBS } from "./AulaEdit";
+import { AULA_CAPTION, AULA_DURATION, AULA_FULL, AULA_INSERTS, AULA_MAIN, AULA_REDACT, AULA_SUBS } from "./AulaEdit";
 import { InsertCtx } from "./AulaKit";
-import { AURORA, BG, ease } from "./ligaDev";
+import { AURORA, BG, ease, L } from "./identity";
 
 // Aula composition (VIDEO_RULES.md, model 1): the presenter plus one infographic at a time.
 // Generic layout; the per-video timeline, inserts and captions come from AulaEdit.tsx.
@@ -58,9 +58,9 @@ const Presenter: React.FC = () => {
       style={{
         transform: moved ? `translate(${x}px, ${y}px) scale(${scale})` : "none",
         transformOrigin: "0 0",
-        borderRadius: (24 / scale) * framed,
+        borderRadius: (L.radius / scale) * framed,
         overflow: "hidden",
-        boxShadow: framed > 0 ? `0 ${30 * framed}px ${70 * framed}px -20px rgba(16,24,40,${0.35 * framed})` : "none",
+        boxShadow: framed > 0 ? `0 ${30 * framed}px ${70 * framed}px -20px rgba(${L.presenterShadow},${0.45 * framed})` : "none",
       }}
     >
       <Video src={staticFile("aula_base.mp4")} style={{ width: "100%", height: "100%" }} />
@@ -101,6 +101,7 @@ export const Aula: React.FC = () => {
       {/* full frame: centred at the bottom; with a panel: centred under the shrunk presenter */}
       <AulaCaptions
         subs={AULA_SUBS}
+        main={AULA_MAIN}
         centerX={960 + (BOX.x + 960 * SCALE - 960) * p}
         maxWidth={AULA_CAPTION.maxWidth + (1100 - AULA_CAPTION.maxWidth) * p}
         bottom={AULA_CAPTION.bottom}

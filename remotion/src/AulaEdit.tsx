@@ -1,576 +1,583 @@
-// The current Aula edit: "Git e GitHub 4" (Liga Dev, English main captions). Rewrite this file and
-// data/aula_subs.json for each new Aula edit; Aula.tsx, AulaKit.tsx and AulaCaptions.tsx stay.
+// The current Aula edit: "Review Double WH Questions" (BF Academy, Portuguese main captions). Rewrite
+// this file and data/aula_subs.json for each new Aula edit; Aula.tsx, AulaKit.tsx and AulaCaptions.tsx stay.
 //
-// A screen recording (GitHub in the browser, IntelliJ with the terminal at the bottom and a webcam
-// box on the right, back to the browser, back to IntelliJ). The idle pauses were cut, so
-// public/aula_base.mp4 is the jump-cut timeline. Every time below is written on the SOURCE timeline
-// and converted with t().
+// A camera lesson (the teacher centred in the frame). The source is cut at 17.5 s (the lesson starts
+// there); every time below is in seconds on the cut timeline, which is the timeline of public/aula_base.mp4.
 import React, { useContext } from "react";
-import { Img, staticFile } from "remotion";
+import { Img, interpolate, staticFile } from "remotion";
 import subs from "./data/aula_subs.json";
-import type { AulaSub } from "./AulaCaptions";
-import { L } from "./ligaDev";
+import type { AulaSub, Lang } from "./AulaCaptions";
+import { body, display, L, spring } from "./identity";
 import {
   Appear,
-  Callout,
   Card,
   Chip,
-  CodeLine,
-  Column,
   Eyebrow,
   Icon,
   IconName,
   InsertCtx,
-  ListInsert,
-  MiniCode,
   Panel,
+  POPS,
   S,
-  StageBox,
   TypeS,
   Typed,
   bodyText,
   gradientText,
   titleStyle,
+  useT,
 } from "./AulaKit";
 
-// Kept source segments (cut.py --segments); each starts on its first whole frame at 30 fps
-const KEEP: [number, number][] = [
-  [0, 23.02], [23.7, 27.05], [29.15, 86.29], [86.9, 94.68], [95.24, 135.84], [136.47, 137.14],
-  [137.75, 181.85], [182.64, 187.76], [188.46, 190.96], [191.86, 195.57], [196.15, 196.75],
-  [197.65, 198.75], [201.09, 203.88], [204.62, 210.86], [211.85, 262.31], [263.12, 278.05],
-  [278.6, 301.56], [303.14, 303.467],
-];
-const fr = (s: number) => Math.ceil(s * 30 - 1e-6) / 30;
-// source time → jump-cut time (a time inside a removed pause maps to the join)
-export const t = (s: number) => {
-  let cum = 0;
-  for (const [a, b] of KEEP) {
-    if (s < fr(a)) return cum;
-    if (s <= fr(b)) return cum + (s - fr(a));
-    cum += fr(b) - fr(a);
-  }
-  return cum;
+export const AULA_DURATION = 305.0;
+export const AULA_SUBS = subs as AulaSub[];
+export const AULA_MAIN: Lang = "pt";
+
+// Camera lesson: the full frame, captions at the bottom
+export const AULA_FULL = { scale: 1, x: 0, y: 0 };
+export const AULA_CAPTION = { maxWidth: 1500, bottom: 40, size: 40 };
+export const AULA_REDACT: { from: number; to: number; x: number; y: number; w: number; h: number }[] = [];
+
+// ---------- pieces of this edit ----------
+
+const CPS = 16; // typing speed of example sentences
+
+const label: React.CSSProperties = {
+  fontFamily: body,
+  fontWeight: 600,
+  fontSize: 19,
+  letterSpacing: "0.14em",
+  textTransform: "uppercase",
+  color: L.accentText,
 };
 
-export const AULA_DURATION = t(303.467);
-export const AULA_SUBS = subs as AulaSub[];
-
-// Screen recording: shrunk to 82% at the top so the captions get their own band under it
-export const AULA_FULL = { scale: 0.82, x: (1920 - 1920 * 0.82) / 2, y: 24 };
-export const AULA_CAPTION = { maxWidth: 1574, bottom: 22, size: 36 };
-
-// E-mails on the git log "Author" lines, in base-video pixels. Tracked frame by frame
-// (work/detect_author.py): the terminal scrolls with every command and the text gets selected.
-export const AULA_REDACT = [
-  { from: t(34.9), to: t(56.9), x: 316, y: 835, w: 326, h: 30 },
-  { from: t(56.3), to: t(57.3), x: 316, y: 810, w: 326, h: 30 },
-  { from: t(56.5), to: t(107.3), x: 316, y: 792, w: 326, h: 30 },
-  { from: t(106.7), to: t(114.3), x: 316, y: 747, w: 326, h: 30 },
-  { from: t(113.7), to: t(114.7), x: 316, y: 722, w: 326, h: 30 },
-  { from: t(113.9), to: t(137.1), x: 316, y: 677, w: 326, h: 30 },
-  { from: t(230.5), to: t(255.9), x: 316, y: 879, w: 326, h: 30 },
-  { from: t(255.3), to: t(256.7), x: 316, y: 854, w: 326, h: 30 },
-  // the final git log scrolls down and back up, so each position holds only between scrolls
-  { from: t(263.9), to: t(266.05), x: 290, y: 727, w: 326, h: 30 },
-  { from: t(263.9), to: t(266.05), x: 316, y: 879, w: 326, h: 30 },
-  { from: t(265.95), to: t(266.25), x: 290, y: 769, w: 326, h: 30 },
-  { from: t(265.95), to: t(266.25), x: 316, y: 920, w: 326, h: 30 },
-  { from: t(266.15), to: t(268.85), x: 290, y: 803, w: 326, h: 30 },
-  { from: t(266.15), to: t(268.85), x: 316, y: 955, w: 326, h: 30 },
-  { from: t(268.75), to: t(299.05), x: 290, y: 727, w: 326, h: 30 },
-  { from: t(268.75), to: t(299.05), x: 316, y: 879, w: 326, h: 30 },
-  { from: t(298.95), to: t(299.25), x: 290, y: 781, w: 326, h: 30 },
-  { from: t(298.95), to: t(299.25), x: 316, y: 934, w: 326, h: 30 },
-  { from: t(299.15), to: AULA_DURATION + 1, x: 290, y: 803, w: 326, h: 30 },
-  { from: t(299.15), to: AULA_DURATION + 1, x: 316, y: 955, w: 326, h: 30 },
-];
-
-// Free area of the IntelliJ editor (top right, above the terminal, right of the code, above the
-// webcam), in frame pixels once the recording is at 82%
-const BOX = { x: 1110, y: 140, w: 570, h: 340 };
-
-const small: React.CSSProperties = { ...bodyText, fontSize: 25 };
-
-const Row: React.FC<{ at: number; icon: IconName; color?: string; children: React.ReactNode }> = ({
-  at,
-  icon,
-  color = L.accentText,
-  children,
-}) => (
-  <Appear at={at}>
-    <div style={{ display: "flex", alignItems: "center", gap: 12, ...small }}>
-      <Icon name={icon} size={26} color={color} />
-      <span>{children}</span>
-    </div>
-  </Appear>
+const Gold: React.FC<{ on?: boolean; children: React.ReactNode }> = ({ on = true, children }) => (
+  <span style={{ color: on ? L.accent : L.text }}>{children}</span>
 );
 
-const SmallChip: React.FC<{ at: number; tone?: "ok" | "info"; icon?: IconName; children: React.ReactNode }> = ({
+const IconChip: React.FC<{ at: number; icon: IconName; children: React.ReactNode; color?: string; strong?: boolean }> = ({
   at,
-  tone = "info",
   icon,
   children,
+  color,
+  strong,
 }) => (
   <Appear at={at}>
-    <div
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        gap: 8,
-        padding: "7px 16px",
-        borderRadius: 999,
-        background: tone === "ok" ? "#e6f6ea" : L.chip,
-        border: `1px solid ${tone === "ok" ? "#9fd8ad" : L.chipBorder}`,
-        color: tone === "ok" ? "#1f6b30" : L.text,
-        fontFamily: small.fontFamily,
-        fontWeight: 600,
-        fontSize: 22,
-      }}
-    >
-      {icon && <Icon name={icon} size={22} color={tone === "ok" ? L.success : L.accentText} />}
+    <Chip strong={strong}>
+      <Icon name={icon} size={26} color={strong ? L.strongText : (color ?? L.accentText)} />
       {children}
-    </div>
+    </Chip>
   </Appear>
 );
 
-const Chips: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>{children}</div>
+// A chip crossed out in red at `strike`
+const StruckChip: React.FC<{ at: number; strike: number; children: React.ReactNode }> = ({ at, strike, children }) => {
+  const t = useT();
+  const w = interpolate(t, [strike, strike + 0.3], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return (
+    <Appear at={at}>
+      <div style={{ position: "relative", display: "inline-flex" }}>
+        <Chip>{children}</Chip>
+        {w > 0 && (
+          <div
+            style={{ position: "absolute", left: 14, top: "50%", height: 4, width: `calc(${w * 100}% - 28px)`, borderRadius: 2, background: L.error }}
+          />
+        )}
+      </div>
+    </Appear>
+  );
+};
+
+// An English example typed in, with the Portuguese line she says
+const Example: React.FC<{ en: { text: string; at: number }; pt?: { text: string; at: number }; tag?: string; size?: number }> = ({
+  en,
+  pt,
+  tag = "For example",
+  size = 40,
+}) => (
+  <Appear at={en.at - 0.25}>
+    <Card style={{ display: "flex", flexDirection: "column", gap: 10, padding: "22px 28px" }}>
+      <div style={label}>{tag}</div>
+      <div style={{ ...bodyText, fontSize: size, minHeight: size * 1.3 }}>
+        <Typed text={en.text} at={en.at} cps={CPS} />
+      </div>
+      {pt && (
+        <Appear at={pt.at} popIn={false}>
+          <div style={{ ...bodyText, fontSize: 28, fontWeight: 500, color: L.text2 }}>{pt.text}</div>
+        </Appear>
+      )}
+    </Card>
+  </Appear>
 );
 
-const BigTitle: React.FC<{ text: string; at: number }> = ({ text, at }) => (
-  <div style={{ ...titleStyle, minHeight: 74 }}>
-    <Typed text={text} at={at} cps={14} style={gradientText} />
-  </div>
-);
+type WordProps = {
+  n: string;
+  word: { text: string; at: number };
+  pt?: { text: string; at: number };
+  ex?: { text: string; at: number };
+  exPt?: { text: string; at: number };
+  children?: React.ReactNode; // extra rows
+  sfx?: React.ReactNode; // their sound effects
+};
 
-// ---------- browser: create the remote repository ----------
-
-// P1 · final step: first push
-export const P1 = () => {
+// One WH word: number, word, translation, example
+const WordInsert: React.FC<WordProps> = ({ n, word, pt, ex, exPt, children, sfx }) => {
   const { from } = useContext(InsertCtx);
   return (
     <>
       <Panel>
-        <Eyebrow>Final step</Eyebrow>
-        <BigTitle text="First push" at={t(8.3)} />
-        <Appear at={t(10.6)}>
-          <Chip>
-            <Icon name="globe" size={26} color={L.accentText} />
-            Understand GitHub a little
-          </Chip>
+        <Eyebrow>WH question · {n}</Eyebrow>
+        <Appear at={word.at}>
+          <Card focus style={{ display: "flex", alignItems: "baseline", gap: 24, padding: "26px 32px" }}>
+            <div style={{ ...titleStyle, fontSize: 84 }}>
+              <span style={gradientText}>{word.text}</span>
+            </div>
+            {pt && (
+              <Appear at={pt.at} popIn={false}>
+                <div style={{ fontFamily: body, fontWeight: 500, fontSize: 38, color: L.text2 }}>{pt.text}</div>
+              </Appear>
+            )}
+          </Card>
         </Appear>
-        <Appear at={t(12.9)}>
-          <Chip strong>First: a remote repository</Chip>
-        </Appear>
+        {ex && <Example en={ex} pt={exPt} />}
+        {children}
       </Panel>
       <S name="whooshSoft" at={from} />
-      <TypeS text="First push" at={t(8.3)} cps={14} />
-      <S name="pop1" at={t(10.6)} />
-      <S name="pop2" at={t(12.9)} />
+      {word.at > from + 0.3 && <S name="pop1" at={word.at} />}
+      {pt && <S name="pop2" at={pt.at} />}
+      {ex && <TypeS text={ex.text} at={ex.at} cps={CPS} />}
+      {exPt && <S name="pop3" at={exPt.at} />}
+      {sfx}
     </>
   );
 };
 
-// P2 · create the remote repository
-export const P2 = () => (
-  <ListInsert
-    eyebrow="Create a remote repository"
-    items={[
-      { at: t(17.3), text: "+ → New repository", icon: "folder" },
-      { at: t(20.0), text: "Name it: aula-poo", icon: "file" },
-      { at: t(24.4), text: "Check nothing: Create", icon: "check" },
-      { at: t(32.5), text: "Copy the repository URL", icon: "globe" },
-    ]}
+// ---------- inserts ----------
+
+// I01 · title
+const I01 = () => {
+  const { from } = useContext(InsertCtx);
+  return (
+    <>
+      <Panel>
+        <IconChip at={from + 0.1} icon="history">
+          Aula de revisão
+        </IconChip>
+        <div style={{ ...titleStyle, fontSize: 96, minHeight: 112 }}>
+          <Typed text="WH Questions" at={6.41} cps={14} style={gradientText} />
+        </div>
+      </Panel>
+      <S name="whooshSoft" at={from} />
+      <TypeS text="WH Questions" at={6.41} cps={14} />
+    </>
+  );
+};
+
+// I02 · the term
+const I02 = () => {
+  const { from } = useContext(InsertCtx);
+  const t = useT();
+  const WH = 15.47;
+  return (
+    <>
+      <Panel>
+        <Eyebrow>O que são?</Eyebrow>
+        <Card focus style={{ padding: "34px 36px", display: "flex", flexDirection: "column", gap: 18 }}>
+          <div style={{ ...titleStyle, fontSize: 76 }}>
+            <span style={gradientText}>WH Questions</span>
+          </div>
+          <Appear at={13.13} popIn={false}>
+            <div style={{ ...bodyText, fontSize: 34, fontWeight: 500, color: L.text2 }}>
+              Perguntas iniciadas por{" "}
+              <span style={{ fontWeight: 600, whiteSpace: "nowrap" }}>
+                <Gold on={t >= WH}>W H</Gold>
+              </span>
+            </div>
+          </Appear>
+        </Card>
+      </Panel>
+      <S name="whooshSoft" at={from} />
+      <S name="pop1" at={WH} />
+    </>
+  );
+};
+
+// I03 · who
+const I03 = () => (
+  <WordInsert
+    n="01"
+    word={{ text: "Who", at: 26.09 }}
+    pt={{ text: "quem", at: 26.79 }}
+    ex={{ text: "Who are you?", at: 29.41 }}
+    exPt={{ text: "Quem é você?", at: 30.51 }}
   />
 );
 
-// ---------- IntelliJ: remote, branch, push ----------
+// I04 · whom: about a third person
+const PERSONS = [
+  { at: 64.89, text: "Eu · 1ª pessoa" },
+  { at: 66.17, text: "Você · 2ª pessoa" },
+  { at: 69.69, text: "Uma 3ª pessoa", strong: true },
+];
+const I04 = () => (
+  <WordInsert
+    n="02"
+    word={{ text: "Whom", at: 34.87 }}
+    pt={{ text: "quem", at: 45.07 }}
+    ex={{ text: "Whom did you call?", at: 37.77 }}
+    exPt={{ text: "Quem te ligou?", at: 40.21 }}
+    sfx={
+      <>
+        <S name="pop1" at={51.33} />
+        <S name="pop2" at={55.67} />
+        {PERSONS.map((p) => (
+          <S key={p.at} name="tick" at={p.at} />
+        ))}
+      </>
+    }
+  >
+    <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+      <IconChip at={51.33} icon="message">
+        who: pergunta direta
+      </IconChip>
+      <IconChip at={55.67} icon="user">
+        whom: sobre uma <Gold>terceira pessoa</Gold>
+      </IconChip>
+    </div>
+    <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+      {PERSONS.map((p) => (
+        <Appear key={p.at} at={p.at}>
+          <Chip strong={p.strong}>{p.text}</Chip>
+        </Appear>
+      ))}
+    </div>
+  </WordInsert>
+);
 
-// C1 · git remote add origin
-export const C1 = () => {
-  const { from } = useContext(InsertCtx);
+// I05 · whose
+const I05 = () => (
+  <WordInsert
+    n="03"
+    word={{ text: "Whose", at: 76.73 }}
+    pt={{ text: "de quem", at: 82.37 }}
+    ex={{ text: "Whose pens and books are these?", at: 89.55 }}
+    exPt={{ text: "De quem são essas canetas e livros?", at: 95.63 }}
+    sfx={<S name="ding" at={98.87} volume={0.6} />}
+  >
+    <Appear at={98.87}>
+      <Chip strong>whose sozinho = de quem</Chip>
+    </Appear>
+  </WordInsert>
+);
+
+// I06 · why
+const I06 = () => (
+  <WordInsert
+    n="04"
+    word={{ text: "Why", at: 103.31 }}
+    pt={{ text: "por quê", at: 106.21 }}
+    ex={{ text: "Why do you say that?", at: 109.51 }}
+    exPt={{ text: "Por que você diz isso?", at: 113.19 }}
+  />
+);
+
+// I07 · which
+const I07 = () => (
+  <WordInsert
+    n="05"
+    word={{ text: "Which", at: 122.35 }}
+    pt={{ text: "qual", at: 130.89 }}
+    ex={{ text: "Which do you want?", at: 129.55 }}
+    exPt={{ text: "Qual você quer?", at: 130.89 }}
+    sfx={<S name="pop1" at={126.45} />}
+  >
+    <IconChip at={126.45} icon="layers">
+      Quando temos opções
+    </IconChip>
+  </WordInsert>
+);
+
+// I08 · what
+const I08 = () => (
+  <WordInsert
+    n="06"
+    word={{ text: "What", at: 136.54 }}
+    pt={{ text: "o quê", at: 140.16 }}
+    ex={{ text: "What do you do?", at: 141.48 }}
+    exPt={{ text: "O que você faz?", at: 143.34 }}
+  />
+);
+
+// I09 · where
+const I09 = () => (
+  <WordInsert
+    n="07"
+    word={{ text: "Where", at: 147.76 }}
+    pt={{ text: "onde", at: 149.5 }}
+    ex={{ text: "Where is Jonas?", at: 152.0 }}
+    exPt={{ text: "Onde está Jonas?", at: 158.26 }}
+  />
+);
+
+// I10 · when
+const I10 = () => (
+  <WordInsert
+    n="08"
+    word={{ text: "When", at: 160.92 }}
+    pt={{ text: "quando", at: 164.12 }}
+    ex={{ text: "When do you arrive?", at: 165.72 }}
+    exPt={{ text: "Quando você chega?", at: 168.56 }}
+  />
+);
+
+// I11 · how: not originally a WH question (an O between the H and the W), but it complements the others
+const LETTERS = [
+  { ch: "H", at: 185.57, gold: true },
+  { ch: "O", at: 186.85, gold: false },
+  { ch: "W", at: 184.77, gold: true },
+];
+const NOT_WH = 178.61;
+const I11 = () => {
+  const t = useT();
   return (
-    <>
-      <Callout box={BOX}>
-        <Eyebrow>Link local → remote</Eyebrow>
-        <MiniCode>
-          <CodeLine
-            size={23}
-            parts={[
-              { text: "git remote add", at: t(39.8), cps: 10 },
-              { text: " origin", at: t(45.5), cps: 14, color: "#9cc2ff" },
-              { text: " <URL>", at: t(47.8), cps: 14, color: "#b9a6ff" },
-            ]}
-          />
-        </MiniCode>
-        <Chips>
-          <SmallChip at={t(46.5)} icon="globe">
-            origin = the remote&apos;s link
-          </SmallChip>
-          <SmallChip at={t(53.4)} icon="branch">
-            A link: nothing sent yet
-          </SmallChip>
-        </Chips>
-      </Callout>
-      <S name="whooshSoft" at={from} />
-      <TypeS text="git remote add" at={t(39.8)} cps={10} />
-      <TypeS text=" origin" at={t(45.5)} cps={14} />
-      <TypeS text=" <URL>" at={t(47.8)} cps={14} />
-      <S name="pop1" at={t(46.5)} />
-      <S name="pop2" at={t(53.4)} />
-    </>
+    <WordInsert
+      n="extra"
+      word={{ text: "How", at: 170.56 }}
+      pt={{ text: "como", at: 174.78 }}
+      ex={{ text: "How are you?", at: 173.18 }}
+      sfx={
+        <>
+          <S name="tick" at={NOT_WH} />
+          {LETTERS.map((l, i) => (
+            <S key={l.ch} name={POPS[i % 3]} at={l.at} />
+          ))}
+          <S name="ding" at={196.29} volume={0.6} />
+        </>
+      }
+    >
+      <Appear at={NOT_WH}>
+        <Card style={{ display: "flex", flexDirection: "column", gap: 14, padding: "20px 28px" }}>
+          <div style={label}>Não é originalmente uma WH question</div>
+          <div style={{ display: "flex", gap: 10 }}>
+            {LETTERS.map((l) => {
+              const on = t >= l.at;
+              const color = !on ? L.text : l.gold ? L.accent : L.error;
+              return (
+                <div
+                  key={l.ch}
+                  style={{
+                    width: 64,
+                    height: 70,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRadius: 14,
+                    background: L.chip,
+                    border: `2px solid ${on ? color : L.chipBorder}`,
+                    fontFamily: display,
+                    fontWeight: 700,
+                    fontSize: 42,
+                    color,
+                    transform: on && t < l.at + 0.4 ? `scale(${spring(t, l.at)})` : "none",
+                  }}
+                >
+                  {l.ch}
+                </div>
+              );
+            })}
+            <Appear at={186.85} popIn={false} style={{ alignSelf: "center" }}>
+              <div style={{ ...bodyText, fontSize: 24, fontWeight: 500, color: L.text2, marginLeft: 8 }}>o O separa o H do W</div>
+            </Appear>
+          </div>
+        </Card>
+      </Appear>
+      <Appear at={196.29}>
+        <Chip strong>Complementa todas as outras</Chip>
+      </Appear>
+    </WordInsert>
   );
 };
 
-// P3 · branches
-export const P3 = () => {
+// I12 · WH questions have no yes/no short answer
+const I12 = () => {
   const { from } = useContext(InsertCtx);
+  const t = useT();
+  const WRONG = 212.61;
   return (
     <>
       <Panel>
-        <Eyebrow>A bit about branches</Eyebrow>
-        <BigTitle text="Branch" at={t(63.1)} />
-        <Appear at={t(71.7)}>
-          <StageBox icon="branch" title="Main path" sub="Your project's main line" focus />
-        </Appear>
-        <Appear at={t(74.0)}>
-          <StageBox icon="layers" title="Parallel paths" sub="Tests and new functions" />
-        </Appear>
-        <Appear at={t(77.6)}>
-          <Chip>
-            <Icon name="check" size={26} color={L.success} />
-            Without breaking what works
-          </Chip>
-        </Appear>
-      </Panel>
-      <S name="whooshSoft" at={from} />
-      <TypeS text="Branch" at={t(63.1)} cps={14} />
-      <S name="tick" at={t(71.7)} />
-      <S name="tick" at={t(74.0)} />
-      <S name="pop3" at={t(77.6)} />
-    </>
-  );
-};
-
-// C2 · master → main
-export const C2 = () => {
-  const { from } = useContext(InsertCtx);
-  return (
-    <>
-      <Callout box={BOX}>
-        <Eyebrow>Rename the main branch</Eyebrow>
-        <Row at={t(89.8)} icon="branch" color={L.text2}>
-          Default: master
-        </Row>
-        <Row at={t(92.3)} icon="globe">
-          GitHub recommends: main
-        </Row>
-        <MiniCode>
-          <CodeLine
-            size={22}
-            parts={[
-              { text: "git branch", at: t(101.4), cps: 14 },
-              { text: " -m", at: t(102.4), cps: 14, color: "#9cc2ff" },
-              { text: " main", at: t(106.1), cps: 14, color: "#b9a6ff" },
-            ]}
-          />
-          <Appear at={t(112.6)} popIn={false}>
-            <CodeLine size={22} hl parts={[{ text: "git branch", at: t(112.6), cps: 14 }]} />
-          </Appear>
-        </MiniCode>
-        <Chips>
-          <SmallChip at={t(104.4)}>-m = rename</SmallChip>
-          <SmallChip at={t(116.1)} tone="ok" icon="check">
-            On main
-          </SmallChip>
-        </Chips>
-      </Callout>
-      <S name="whooshSoft" at={from} />
-      <S name="pop1" at={t(89.8)} />
-      <S name="pop2" at={t(92.3)} />
-      <TypeS text="git branch -m" at={t(101.4)} cps={14} />
-      <TypeS text=" main" at={t(106.1)} cps={14} />
-      <S name="pop3" at={t(104.4)} />
-      <TypeS text="git branch" at={t(112.6)} cps={14} />
-      <S name="confirm" at={t(116.1)} />
-    </>
-  );
-};
-
-// C3 · git push origin main
-export const C3 = () => {
-  const { from } = useContext(InsertCtx);
-  return (
-    <>
-      <Callout box={BOX}>
-        <Eyebrow>Send it to the cloud</Eyebrow>
-        <MiniCode>
-          <CodeLine
-            size={24}
-            parts={[
-              { text: "git push", at: t(120.3), cps: 14 },
-              { text: " origin", at: t(127.8), cps: 14, color: "#9cc2ff" },
-              { text: " main", at: t(135.1), cps: 14, color: "#b9a6ff" },
-            ]}
-          />
-        </MiniCode>
-        <Chips>
-          <SmallChip at={t(121.6)} icon="up">
-            push = local → cloud
-          </SmallChip>
-          <SmallChip at={t(139.7)} tone="ok" icon="check">
-            Sent
-          </SmallChip>
-          <SmallChip at={t(142.7)} icon="user">
-            May ask you to log in
-          </SmallChip>
-        </Chips>
-      </Callout>
-      <S name="whooshSoft" at={from} />
-      <TypeS text="git push" at={t(120.3)} cps={14} />
-      <TypeS text=" origin" at={t(127.8)} cps={14} />
-      <TypeS text=" main" at={t(135.1)} cps={14} />
-      <S name="pop1" at={t(121.6)} />
-      <S name="confirm" at={t(139.7)} />
-      <S name="pop2" at={t(142.7)} />
-    </>
-  );
-};
-
-// ---------- browser: the project on GitHub, another computer ----------
-
-// P4 · the project on GitHub
-export const P4 = () => {
-  const { from } = useContext(InsertCtx);
-  return (
-    <>
-      <Panel>
-        <Eyebrow>On GitHub</Eyebrow>
-        <Appear at={t(149.9)}>
-          <Chip>
-            <Icon name="undo" size={26} color={L.accentText} />
-            F5 on the repository page
-          </Chip>
-        </Appear>
-        <Appear at={t(152.0)}>
-          <Card focus style={{ display: "flex", alignItems: "center", gap: 20 }}>
-            <Icon name="cloud" size={48} />
-            <div>
-              <div style={{ ...titleStyle, fontSize: 34 }}>Your whole project</div>
-              <div style={{ ...bodyText, fontSize: 25, fontWeight: 500, color: L.text2 }}>
-                Almost instantly, no dragging files
-              </div>
+        <Eyebrow>Como responder?</Eyebrow>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+          <StruckChip at={206.23} strike={207.95}>
+            Yes, I do.
+          </StruckChip>
+          <StruckChip at={207.27} strike={208.13}>
+            No, I don&apos;t.
+          </StruckChip>
+        </div>
+        <Appear at={209.7}>
+          <Card style={{ display: "flex", flexDirection: "column", gap: 12, padding: "22px 28px" }}>
+            <div style={{ ...bodyText, fontSize: 40, minHeight: 52 }}>
+              <Typed text="What do you do?" at={209.95} cps={CPS} />
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, opacity: t >= WRONG ? 1 : 0 }}>
+              <Icon name="ban" size={30} color={L.error} />
+              <div style={{ ...bodyText, fontSize: 32, color: L.text2 }}>Yes, I do.</div>
             </div>
           </Card>
         </Appear>
-        <Appear at={t(158.5)}>
-          <Chip>
-            <Icon name="branch" size={26} color={L.accentText} />
-            Branch: main
-          </Chip>
+        <IconChip at={222.29} icon="ban" color={L.error}>
+          Sem short answer pronta
+        </IconChip>
+      </Panel>
+      <S name="whooshSoft" at={from} />
+      <S name="pop1" at={206.23} />
+      <S name="pop2" at={207.27} />
+      <S name="error" at={207.95} volume={0.5} />
+      <TypeS text="What do you do?" at={209.95} cps={CPS} />
+      <S name="error" at={WRONG} volume={0.5} />
+      <S name="pop3" at={222.29} />
+    </>
+  );
+};
+
+// I13 · answer according to the context
+const I13 = () => {
+  const { from } = useContext(InsertCtx);
+  return (
+    <>
+      <Panel>
+        <Eyebrow>Como responder?</Eyebrow>
+        <Appear at={229.17}>
+          <Chip strong>De acordo com o contexto da pergunta</Chip>
         </Appear>
-      </Panel>
-      <S name="whooshSoft" at={from} />
-      <S name="pop1" at={t(149.9)} />
-      <S name="ding" at={t(152.0)} volume={0.6} />
-      <S name="pop2" at={t(158.5)} />
-    </>
-  );
-};
-
-// P5 · simulating another computer
-export const P5 = () => (
-  <ListInsert
-    eyebrow="Simulating another computer"
-    items={[
-      { at: t(174.6), text: "Edit the file on GitHub", icon: "file" },
-      { at: t(179.6), text: "Add a System.out", icon: "terminal" },
-      { at: t(192.8), text: "Commit", icon: "check" },
-      { at: t(194.5), text: "Push", icon: "up" },
-    ]}
-  />
-);
-
-// P6 · remote × local
-export const P6 = () => {
-  const { from } = useContext(InsertCtx);
-  return (
-    <>
-      <Panel>
-        <Eyebrow>Remote × Local</Eyebrow>
-        <div style={{ display: "flex", gap: 20, alignItems: "stretch" }}>
-          <Appear at={t(214.0)} style={{ flex: 1, display: "flex" }}>
-            <Column
-              focus
-              title="Remote"
-              icon="cloud"
-              lines={[
-                { at: t(216.6), text: "2 commits" },
-                { at: t(218.4), text: "initial" },
-                { at: t(221.1), text: "+ the little print" },
-              ]}
-            />
-          </Appear>
-          <Appear at={t(227.2)} style={{ flex: 1, display: "flex" }}>
-            <Column title="Local" icon="laptop" lines={[{ at: t(231.6), text: "Only 1 commit" }]} />
-          </Appear>
+        <Example en={{ text: "How are you?", at: 232.53 }} pt={{ text: "Como você está?", at: 233.35 }} />
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          <IconChip at={234.47} icon="check" color={L.success}>
+            I&apos;m fine.
+          </IconChip>
+          <IconChip at={235.93} icon="check" color={L.success}>
+            I&apos;m not so good today.
+          </IconChip>
         </div>
       </Panel>
       <S name="whooshSoft" at={from} />
-      <S name="pop1" at={t(214.0)} />
-      <S name="pageTurn" at={t(227.2)} />
-      <S name="error" at={t(231.6)} volume={0.7} />
+      <S name="pop1" at={229.17} />
+      <TypeS text="How are you?" at={232.53} cps={CPS} />
+      <S name="pop2" at={234.47} />
+      <S name="pop3" at={235.93} />
     </>
   );
 };
 
-// ---------- IntelliJ: pull ----------
-
-// C4 · git pull origin main
-export const C4 = () => {
+// I14 · the challenge: how to ask about frequency? How often (silent T)
+const I14 = () => {
   const { from } = useContext(InsertCtx);
-  return (
-    <>
-      <Callout box={BOX}>
-        <Eyebrow>Remote ≠ local</Eyebrow>
-        <Row at={t(235.5)} icon="ban" color={L.error}>
-          Can&apos;t push now
-        </Row>
-        <Row at={t(243.3)} icon="down">
-          Pull what&apos;s new first
-        </Row>
-        <MiniCode>
-          <CodeLine
-            size={24}
-            parts={[
-              { text: "git pull", at: t(248.1), cps: 14 },
-              { text: " origin", at: t(251.1), cps: 14, color: "#9cc2ff" },
-              { text: " main", at: t(253.2), cps: 14, color: "#b9a6ff" },
-            ]}
-          />
-        </MiniCode>
-        <SmallChip at={t(258.6)} tone="ok" icon="check">
-          Changes added
-        </SmallChip>
-      </Callout>
-      <S name="whooshSoft" at={from} />
-      <S name="pop1" at={t(235.5)} />
-      <S name="pop2" at={t(243.3)} />
-      <TypeS text="git pull" at={t(248.1)} cps={14} />
-      <TypeS text=" origin" at={t(251.1)} cps={14} />
-      <TypeS text=" main" at={t(253.2)} cps={14} />
-      <S name="confirm" at={t(258.6)} />
-    </>
-  );
-};
-
-// C5 · git log: two commits
-export const C5 = () => {
-  const { from } = useContext(InsertCtx);
-  return (
-    <>
-      <Callout box={BOX}>
-        <Eyebrow>Check the history</Eyebrow>
-        <MiniCode>
-          <CodeLine size={24} parts={[{ text: "git log", at: t(261.0), cps: 14 }]} />
-        </MiniCode>
-        <Row at={t(261.9)} icon="history">
-          2 commits
-        </Row>
-        <SmallChip at={t(268.3)} tone="ok" icon="cloud">
-          Synced with the cloud
-        </SmallChip>
-      </Callout>
-      <S name="whooshSoft" at={from} />
-      <TypeS text="git log" at={t(261.0)} cps={14} />
-      <S name="pop1" at={t(261.9)} />
-      <S name="confirm" at={t(268.3)} />
-    </>
-  );
-};
-
-// P7 · push × pull
-export const P7 = () => {
-  const { from } = useContext(InsertCtx);
+  const t = useT();
+  const ANSWER = 284.57;
+  const T_OFF = 292.39;
+  const strike = interpolate(t, [T_OFF, T_OFF + 0.3], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <>
       <Panel>
-        <Eyebrow>Push × Pull</Eyebrow>
-        <div style={{ display: "flex", gap: 20, alignItems: "stretch" }}>
-          <Appear at={t(270.2)} style={{ flex: 1, display: "flex" }}>
-            <Column title="git push" icon="up" lines={[{ at: t(271.1), text: "Local → cloud" }]} />
-          </Appear>
-          <Appear at={t(274.5)} style={{ flex: 1, display: "flex" }}>
-            <Column focus title="git pull" icon="down" lines={[{ at: t(275.0), text: "Cloud → local" }]} />
-          </Appear>
+        <div style={{ ...titleStyle, fontSize: 80, minHeight: 92 }}>
+          <Typed text="Challenge" at={252.71} cps={12} style={gradientText} />
         </div>
+        <Appear at={255.27}>
+          <Card style={{ display: "flex", flexDirection: "column", gap: 10, padding: "22px 28px" }}>
+            <div style={label}>Que pergunta eu faria?</div>
+            <div style={{ ...bodyText, fontSize: 32 }}>Com que frequência você faz alguma coisa?</div>
+          </Card>
+        </Appear>
+        {t < ANSWER && (
+          <IconChip at={273.41} icon="history">
+            Pense um pouco…
+          </IconChip>
+        )}
+        <div
+          style={{
+            opacity: t >= ANSWER ? 1 : 0,
+            transform: t >= ANSWER && t < ANSWER + 0.4 ? `scale(${spring(t, ANSWER)})` : "none",
+          }}
+        >
+          <Card focus style={{ display: "flex", alignItems: "center", gap: 16, padding: "22px 28px" }}>
+            <Icon name="check" size={36} color={L.success} />
+            <div style={{ fontFamily: display, fontWeight: 700, fontSize: 52, letterSpacing: "-0.02em" }}>
+              <span style={{ color: L.text }}>How </span>
+              <span style={{ color: L.accent }}>
+                of
+                <span style={{ position: "relative", display: "inline-block", opacity: 1 - strike * 0.55 }}>
+                  t
+                  {strike > 0 && (
+                    <span
+                      style={{
+                        position: "absolute",
+                        left: -4,
+                        top: "55%",
+                        height: 5,
+                        width: `calc(${strike * 100}% + 8px)`,
+                        borderRadius: 3,
+                        background: L.error,
+                      }}
+                    />
+                  )}
+                </span>
+                en?
+              </span>
+            </div>
+          </Card>
+        </div>
+        <IconChip at={293.23} icon="eye">
+          O T é uma <Gold>silent letter</Gold>
+        </IconChip>
       </Panel>
       <S name="whooshSoft" at={from} />
-      <S name="pop1" at={t(270.2)} />
-      <S name="pageTurn" at={t(274.5)} />
+      <TypeS text="Challenge" at={252.71} cps={12} />
+      <S name="pop1" at={255.27} />
+      <S name="pop2" at={273.41} />
+      <S name="confirm" at={ANSWER} />
+      <S name="ding" at={ANSWER + 0.15} volume={0.6} />
+      <S name="error" at={T_OFF} volume={0.4} />
+      <S name="pop3" at={293.23} />
     </>
   );
 };
 
-// P8 · end card
-export const P8 = () => {
+// End card · logo and goodbye
+const End = () => {
   const { from } = useContext(InsertCtx);
   return (
     <>
       <Panel>
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 26, textAlign: "center" }}>
-          <Appear at={from + 0.1}>
-            <Img src={staticFile("liga-dev.svg")} style={{ width: 120, height: 120 }} />
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 30, textAlign: "center" }}>
+          <Appear at={from + 0.1} popIn={false}>
+            <Img src={staticFile("bf-academy.svg")} style={{ width: 200, height: 200 }} />
           </Appear>
-          <Eyebrow>Done for today</Eyebrow>
-          <div style={{ display: "flex", gap: 12 }}>
-            <Appear at={t(286.4)}>
-              <Chip>
-                <Icon name="check" size={26} color={L.success} />
-                First push
-              </Chip>
-            </Appear>
-            <Appear at={t(287.2)}>
-              <Chip>
-                <Icon name="check" size={26} color={L.success} />
-                First pull
-              </Chip>
-            </Appear>
+          <div style={{ ...titleStyle, fontSize: 76, minHeight: 90 }}>
+            <Typed text="Bye, bye!" at={303.13} cps={14} style={gradientText} />
           </div>
-          <div style={{ ...titleStyle, fontSize: 52, minHeight: 120 }}>
-            <Typed text="Next:" at={t(296.4)} cps={16} style={{ color: L.text }} />
-            <br />
-            <Typed text="a video on branches" at={t(296.7)} cps={18} style={gradientText} />
-          </div>
-          <Appear at={t(297.7)}>
-            <Chip strong>The last Git &amp; GitHub video</Chip>
-          </Appear>
         </div>
       </Panel>
       <S name="whooshSoft" at={from} />
-      <S name="pop1" at={t(286.4)} />
-      <S name="pop2" at={t(287.2)} />
-      <TypeS text="a video on branches" at={t(296.7)} cps={18} />
-      <S name="pop3" at={t(297.7)} />
-      <S name="ding" at={t(300.9)} volume={0.7} />
+      <TypeS text="Bye, bye!" at={303.13} cps={14} />
+      <S name="ding" at={303.8} volume={0.6} />
     </>
   );
 };
 
-// The plan: one infographic at a time, [from, to] in seconds on the cut timeline.
-// `callout` inserts sit over the full frame; the others shrink the recording.
+// The plan: one infographic at a time, [from, to] in seconds; the presenter shrinks while one is on
 export const AULA_INSERTS: { from: number; to: number; el: React.ReactNode; callout?: boolean }[] = [
-  { from: t(2.4), to: t(14.7), el: <P1 /> },
-  { from: t(14.9), to: t(34.6), el: <P2 /> },
-  { from: t(36.5), to: t(58.6), el: <C1 />, callout: true },
-  { from: t(59.5), to: t(79.2), el: <P3 /> },
-  { from: t(79.6), to: t(118.8), el: <C2 />, callout: true },
-  { from: t(119.5), to: t(147.5), el: <C3 />, callout: true },
-  { from: t(148.3), to: t(163.6), el: <P4 /> },
-  { from: t(164.6), to: t(195.2), el: <P5 /> },
-  { from: t(201.2), to: t(233.0), el: <P6 /> },
-  { from: t(234.9), to: t(260.0), el: <C4 />, callout: true },
-  { from: t(260.1), to: t(269.6), el: <C5 />, callout: true },
-  { from: t(269.8), to: t(277.9), el: <P7 /> },
-  { from: t(278.6), to: AULA_DURATION, el: <P8 /> },
+  { from: 1.9, to: 12.5, el: <I01 /> },
+  { from: 12.6, to: 24.4, el: <I02 /> },
+  { from: 24.6, to: 32.2, el: <I03 /> },
+  { from: 32.3, to: 75.6, el: <I04 /> },
+  { from: 76.4, to: 102.0, el: <I05 /> },
+  { from: 103.0, to: 121.3, el: <I06 /> },
+  { from: 121.4, to: 134.9, el: <I07 /> },
+  { from: 135.0, to: 147.3, el: <I08 /> },
+  { from: 147.4, to: 160.5, el: <I09 /> },
+  { from: 160.6, to: 170.3, el: <I10 /> },
+  { from: 170.4, to: 200.4, el: <I11 /> },
+  { from: 200.5, to: 226.5, el: <I12 /> },
+  { from: 226.9, to: 243.0, el: <I13 /> },
+  { from: 245.5, to: 299.9, el: <I14 /> },
+  { from: 300.0, to: AULA_DURATION, el: <End /> },
 ];

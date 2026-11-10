@@ -1,20 +1,9 @@
 import React, { createContext, useContext } from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import { Sfx, SfxName, TypeSfx } from "./Sfx";
-import {
-  archivo,
-  enter,
-  exitP,
-  GLOW,
-  L,
-  mono,
-  pop,
-  SHADOW,
-  sora,
-  TITLE_GRADIENT,
-} from "./ligaDev";
+import { body, display, enter, exitP, GLOW, L, mono, pop, SHADOW, TITLE_GRADIENT } from "./identity";
 
-// Reusable building blocks for Aula infographics (Liga Dev). The inserts of each edit live in
+// Reusable building blocks for Aula infographics, drawn with the tokens of ./identity. The inserts of each edit live in
 // AulaEdit.tsx and are rewritten per video.
 //
 // Every time in this file is in seconds on the source timeline. An insert's <Sequence> provides
@@ -168,6 +157,12 @@ export const ICONS: Record<string, React.ReactNode> = {
       <circle cx="12" cy="7" r="4" />
     </>
   ),
+  book: (
+    <>
+      <path d="M12 7v14" />
+      <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+    </>
+  ),
   up: (
     <>
       <path d="m5 12 7-7 7 7" />
@@ -248,7 +243,7 @@ export const Callout: React.FC<{
         overflow: "hidden",
         background: L.card,
         border: `1px solid ${L.cardBorder}`,
-        borderRadius: 24,
+        borderRadius: L.radius,
         boxShadow: `${SHADOW}, ${GLOW}`,
         padding: "20px 24px 22px",
         display: "flex",
@@ -318,7 +313,7 @@ export const Card: React.FC<{ children: React.ReactNode; focus?: boolean; style?
     style={{
       background: L.card,
       border: `1px solid ${L.cardBorder}`,
-      borderRadius: 24,
+      borderRadius: L.radius,
       boxShadow: focus ? `${SHADOW}, ${GLOW}` : SHADOW,
       padding: "24px 28px",
       ...style,
@@ -336,10 +331,10 @@ export const Chip: React.FC<{ children: React.ReactNode; strong?: boolean }> = (
       gap: 10,
       padding: "10px 22px",
       borderRadius: 999,
-      background: strong ? "linear-gradient(90deg, #2f6fe0, #1f5fe0)" : L.chip,
+      background: strong ? L.strongBg : L.chip,
       border: strong ? "none" : `1px solid ${L.chipBorder}`,
-      color: strong ? "#ffffff" : L.text,
-      fontFamily: archivo,
+      color: strong ? L.strongText : L.text,
+      fontFamily: body,
       fontWeight: 600,
       fontSize: 25,
     }}
@@ -381,7 +376,7 @@ export const Typed: React.FC<{ text: string; at: number; cps: number; style?: Re
 };
 
 export const titleStyle: React.CSSProperties = {
-  fontFamily: sora,
+  fontFamily: display,
   fontWeight: 700,
   fontSize: 64,
   letterSpacing: "-0.02em",
@@ -407,7 +402,7 @@ export const GradientTitle: React.FC<{ text: string; at: number; cps?: number; s
 );
 
 export const bodyText: React.CSSProperties = {
-  fontFamily: archivo,
+  fontFamily: body,
   fontWeight: 600,
   fontSize: 29,
   lineHeight: 1.3,
@@ -522,12 +517,12 @@ export const CodeLine: React.FC<{
       color: L.darkText,
       padding: "10px 16px",
       borderRadius: 12,
-      background: hl ? "rgba(57,134,255,.22)" : "transparent",
+      background: hl ? L.codeHl : "transparent",
       opacity: dim ? 0.45 : 1,
       whiteSpace: "pre",
     }}
   >
-    <span style={{ color: "#6b7a99" }}>$ </span>
+    <span style={{ color: L.codePrompt }}>$ </span>
     {parts.map((p) => (
       <Typed key={p.at} text={p.text} at={p.at} cps={p.cps ?? 16} cursorColor={L.darkText} style={{ color: p.color }} />
     ))}
@@ -538,7 +533,7 @@ export const CodeBox: React.FC<{ children: React.ReactNode }> = ({ children }) =
   <div
     style={{
       background: L.dark,
-      borderRadius: 24,
+      borderRadius: L.radius,
       boxShadow: SHADOW,
       padding: "22px 18px 26px",
       display: "flex",
@@ -547,7 +542,7 @@ export const CodeBox: React.FC<{ children: React.ReactNode }> = ({ children }) =
     }}
   >
     <div style={{ display: "flex", gap: 8, padding: "0 16px 12px" }}>
-      {["#55617a", "#55617a", "#55617a"].map((c, i) => (
+      {[L.codePrompt, L.codePrompt, L.codePrompt].map((c, i) => (
         <div key={i} style={{ width: 12, height: 12, borderRadius: 999, background: c }} />
       ))}
     </div>
@@ -589,7 +584,7 @@ export const StageBox: React.FC<{ icon: IconName; title: string; sub: string; fo
       <Icon name={icon} size={34} color={L.accentText} />
     </div>
     <div>
-      <div style={{ fontFamily: sora, fontWeight: 700, fontSize: 32, color: L.text, letterSpacing: "-0.02em" }}>{title}</div>
+      <div style={{ fontFamily: display, fontWeight: 700, fontSize: 32, color: L.text, letterSpacing: "-0.02em" }}>{title}</div>
       <div style={{ ...bodyText, fontSize: 25, fontWeight: 500, color: L.text2 }}>{sub}</div>
     </div>
   </Card>
@@ -629,7 +624,7 @@ export const Node: React.FC<{ icon: IconName; title: string; sub: string }> = ({
   <Card style={{ display: "flex", alignItems: "center", gap: 22 }}>
     <Icon name={icon} size={52} />
     <div>
-      <div style={{ fontFamily: sora, fontWeight: 700, fontSize: 32, color: L.text }}>{title}</div>
+      <div style={{ fontFamily: display, fontWeight: 700, fontSize: 32, color: L.text }}>{title}</div>
       <div style={{ ...bodyText, fontSize: 25, fontWeight: 500, color: L.text2 }}>{sub}</div>
     </div>
   </Card>
@@ -637,9 +632,9 @@ export const Node: React.FC<{ icon: IconName; title: string; sub: string }> = ({
 
 export const Cmd: React.FC<{ icon: IconName; cmd: string; label: string }> = ({ icon, cmd, label }) => (
   <div style={{ display: "flex", alignItems: "center", gap: 16, background: L.dark, borderRadius: 999, padding: "12px 26px 12px 18px" }}>
-    <Icon name={icon} size={30} color="#9cc2ff" />
+    <Icon name={icon} size={30} color={L.codeIcon} />
     <span style={{ fontFamily: mono, fontWeight: 700, fontSize: 28, color: L.darkText }}>{cmd}</span>
-    <span style={{ fontFamily: archivo, fontWeight: 500, fontSize: 23, color: "#b6c3da" }}>{label}</span>
+    <span style={{ fontFamily: body, fontWeight: 500, fontSize: 23, color: L.codeLabel }}>{label}</span>
   </div>
 );
 
@@ -651,7 +646,7 @@ export const Column: React.FC<{ title: string; icon: IconName; lines: { at: numb
 }) => (
   <Card focus={focus} style={{ flex: 1, display: "flex", flexDirection: "column", gap: 18, padding: "28px 26px" }}>
     <Icon name={icon} size={44} />
-    <div style={{ fontFamily: sora, fontWeight: 700, fontSize: 40, color: L.text, letterSpacing: "-0.02em" }}>{title}</div>
+    <div style={{ fontFamily: display, fontWeight: 700, fontSize: 40, color: L.text, letterSpacing: "-0.02em" }}>{title}</div>
     {lines.map((l) => (
       <Appear key={l.at} at={l.at} popIn={false}>
         <div style={{ ...bodyText, fontSize: 26, fontWeight: 500, color: L.text2 }}>{l.text}</div>

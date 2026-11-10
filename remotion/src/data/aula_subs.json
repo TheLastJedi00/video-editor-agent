@@ -1,488 +1,422 @@
 [
  {
-  "startMs": 300,
-  "endMs": 2000,
-  "en": "Hey everyone! Leno here.",
-  "pt": "Fala, galera! Leno aqui."
+  "startMs": 1890,
+  "endMs": 3360,
+  "en": "Bem-vindos de volta.",
+  "pt": "Welcome back."
  },
  {
-  "startMs": 2380,
-  "endMs": 6570,
-  "en": "Continuing, to wrap up this stage where we create,",
-  "pt": "E continuando, pra finalizar aqui, né, essa etapa da gente criando,"
+  "startMs": 3410,
+  "endMs": 8240,
+  "en": "Now let's go to our review class on WH questions.",
+  "pt": "Vamos agora para a nossa aula de review sobre WH questions."
  },
  {
-  "startMs": 6620,
-  "endMs": 9320,
-  "en": "set up Git and make our first push,",
-  "pt": "configurando o Git até fazer o nosso primeiro push,"
+  "startMs": 8290,
+  "endMs": 12310,
+  "en": "To start, let's review: what are WH questions again?",
+  "pt": "E já para a gente começar, revisando: o que são mesmo as WH questions?"
  },
  {
-  "startMs": 9480,
-  "endMs": 12130,
-  "en": "we need to understand a bit about GitHub.",
-  "pt": "a gente vai ter que entender um pouquinho aqui do GitHub."
+  "startMs": 13130,
+  "endMs": 16770,
+  "en": "They're questions that start with WH.",
+  "pt": "São perguntas iniciadas por WH."
  },
  {
-  "startMs": 12180,
-  "endMs": 14850,
-  "en": "First we need to create a remote repository.",
-  "pt": "A gente tem que criar primeiro um repositório remoto, tá?"
+  "startMs": 16830,
+  "endMs": 20890,
+  "en": "WH questions. Questions that start with WH.",
+  "pt": "WH questions. Perguntas iniciadas com WH."
  },
  {
-  "startMs": 14900,
-  "endMs": 16670,
-  "en": "So I'll create a new repository here:",
-  "pt": "Então eu vou criar aqui, ó, o new repository:"
+  "startMs": 21150,
+  "endMs": 24960,
+  "en": "So, let's recall our WH questions.",
+  "pt": "Então, vamos relembrar as nossas WH questions."
  },
  {
-  "startMs": 16720,
-  "endMs": 19180,
-  "en": "I clicked the plus button, New repository,",
-  "pt": "eu vim aqui no botãozinho de mais, new repository,"
+  "startMs": 25010,
+  "endMs": 27800,
+  "en": "Número um, who? \"Quem\"?",
+  "pt": "Number one, who? Quem?"
  },
  {
-  "startMs": 19300,
-  "endMs": 23703,
-  "en": "and I'll give it a name, for example aula-poo. Create.",
-  "pt": "e eu vou dar um nome pra ele, por exemplo, aula-poo. Create."
+  "startMs": 27850,
+  "endMs": 31870,
+  "en": "Por exemplo: quem é você?",
+  "pt": "For example, who are you? Quem é você?"
  },
  {
-  "startMs": 23753,
-  "endMs": 26233,
-  "en": "I don't check anything here. Just Create.",
-  "pt": "Não marco nada aqui, tá? Só create."
+  "startMs": 32430,
+  "endMs": 37720,
+  "en": "Number two: whom did you call? Whom?",
+  "pt": "Número dois, number two: whom did you call? Whom?"
  },
  {
-  "startMs": 27833,
-  "endMs": 29243,
-  "en": "Great, it gave me this link",
-  "pt": "Beleza, ele me deu esse link aqui"
+  "startMs": 37770,
+  "endMs": 41900,
+  "en": "Whom did you call?",
+  "pt": "Whom did you call? Quem te ligou?"
  },
  {
-  "startMs": 29293,
-  "endMs": 31713,
-  "en": "and I'll copy this URL.",
-  "pt": "e eu vou copiar essa URL aqui, tá?"
+  "startMs": 41950,
+  "endMs": 47660,
+  "en": "Whom is also a form of \"quem\"; we translate it as \"quem\".",
+  "pt": "Whom também é uma maneira do quem, a gente traduz como quem."
  },
  {
-  "startMs": 31973,
-  "endMs": 33643,
-  "en": "I have my local repository,",
-  "pt": "Eu tenho meu repositório local,"
+  "startMs": 47710,
+  "endMs": 53220,
+  "en": "But instead of asking directly, like who are you?",
+  "pt": "Só que, ao invés de eu perguntar diretamente, no caso, who are you? Quem é você?"
  },
  {
-  "startMs": 33693,
-  "endMs": 36563,
-  "en": "now I want to add a remote repository.",
-  "pt": "agora eu quero adicionar um repositório remoto."
+  "startMs": 53270,
+  "endMs": 57840,
+  "en": "I use whom to ask a question about a third person.",
+  "pt": "O whom eu utilizo para fazer uma pergunta sobre uma terceira pessoa."
  },
  {
-  "startMs": 36613,
-  "endMs": 40243,
-  "en": "So: git remote add.",
-  "pt": "Então: git remote add."
+  "startMs": 57890,
+  "endMs": 64840,
+  "en": "So, just to recap, I use whom to refer to a third person.",
+  "pt": "Então, só para relembrar, o whom eu utilizo para me referir a uma terceira pessoa."
  },
  {
-  "startMs": 40293,
-  "endMs": 43203,
-  "en": "We'll add an origin,",
-  "pt": "A gente vai adicionar uma origem,"
+  "startMs": 64890,
+  "endMs": 67180,
+  "en": "I'm the first person, you're the second.",
+  "pt": "Eu sou a primeira pessoa, você a segunda."
  },
  {
-  "startMs": 43253,
-  "endMs": 45783,
-  "en": "and the origin is exactly my link here.",
-  "pt": "e a origem é justamente o meu link aqui, ó."
+  "startMs": 67230,
+  "endMs": 70800,
+  "en": "I want to ask you about something involving a third person.",
+  "pt": "Eu quero te perguntar sobre algo envolvendo uma terceira pessoa."
  },
  {
-  "startMs": 45833,
-  "endMs": 49253,
-  "en": "This is the command to sync local with remote.",
-  "pt": "Esse aqui é o comando pra sincronizar o local com o remoto."
+  "startMs": 70850,
+  "endMs": 75570,
+  "en": "For example: whom did you call?",
+  "pt": "Por exemplo, quem te ligou? Então, whom did you call?"
  },
  {
-  "startMs": 49733,
-  "endMs": 51983,
-  "en": "Well, not sync: we'll create a link,",
-  "pt": "Sincronizar não, né: a gente vai criar um link,"
+  "startMs": 75710,
+  "endMs": 79660,
+  "en": "Entendi. Whose? Número três.",
+  "pt": "I see. Whose? Whose? Number three."
  },
  {
-  "startMs": 52033,
-  "endMs": 53993,
-  "en": "but we'll need to send things there later.",
-  "pt": "mas a gente vai precisar mandar pra lá depois."
+  "startMs": 79710,
+  "endMs": 83640,
+  "en": "We can translate whose as \"de quem\".",
+  "pt": "Whose, nós podemos traduzir como de quem."
  },
  {
-  "startMs": 54593,
-  "endMs": 55913,
-  "en": "Done, I created the link.",
-  "pt": "Pronto, criei o link."
+  "startMs": 83690,
+  "endMs": 89330,
+  "en": "So, whose, \"de quem\", and the rest of the sentence would be, for example:",
+  "pt": "Então, whose, de quem, e a complementação da frase seria isso, por exemplo:"
  },
  {
-  "startMs": 56773,
-  "endMs": 60933,
-  "en": "The point is, we'll talk a little about branches.",
-  "pt": "O ponto aqui é que a gente vai falar um pouquinho de branch."
+  "startMs": 89550,
+  "endMs": 92450,
+  "en": "De quem são essas canetas e livros?",
+  "pt": "Whose pens and books are these?"
  },
  {
-  "startMs": 61453,
-  "endMs": 63093,
-  "en": "Just a little.",
-  "pt": "Bem pouco mesmo."
+  "startMs": 92590,
+  "endMs": 95530,
+  "en": "De quem são essas canetas e livros?",
+  "pt": "Whose pens and books are these?"
  },
  {
-  "startMs": 63233,
-  "endMs": 67173,
-  "en": "A Git project can have branches.",
-  "pt": "Existem ramificações possíveis dentro de um projeto Git."
+  "startMs": 95630,
+  "endMs": 98360,
+  "en": "Whose pens and books are these?",
+  "pt": "De quem são essas canetas e livros?"
  },
  {
-  "startMs": 67353,
-  "endMs": 70543,
-  "en": "We can have a main path for our project",
-  "pt": "Então a gente pode ter um caminho principal do nosso projeto"
+  "startMs": 98410,
+  "endMs": 102910,
+  "en": "So whose alone already means \"de quem\". Alright?",
+  "pt": "Então, whose, sozinho, já significa de quem. Alright?"
  },
  {
-  "startMs": 70593,
-  "endMs": 73783,
-  "en": "and open parallel paths to run tests,",
-  "pt": "e pode abrir caminhos em paralelo pra fazer testes,"
+  "startMs": 103310,
+  "endMs": 107760,
+  "en": "Why? In English, why is our question \"por quê\".",
+  "pt": "Why? Why, no inglês, é o nosso por quê de pergunta."
  },
  {
-  "startMs": 73833,
-  "endMs": 76783,
-  "en": "add new functions without breaking what already works, OK?",
-  "pt": "adicionar novas funções sem quebrar o que já funciona, ok?"
+  "startMs": 107810,
+  "endMs": 113090,
+  "en": "For example, why do you say that?",
+  "pt": "Por exemplo, why do you say that?"
  },
  {
-  "startMs": 76833,
-  "endMs": 85563,
-  "en": "The point is that, by default, Git names",
-  "pt": "O ponto aqui é que, por padrão, o Git, ele nomeia, né,"
+  "startMs": 113190,
+  "endMs": 115490,
+  "en": "Why do you say that?",
+  "pt": "Por que você diz isso?"
  },
  {
-  "startMs": 85613,
-  "endMs": 87483,
-  "en": "this main path master,",
-  "pt": "esse caminho principal de master,"
+  "startMs": 115540,
+  "endMs": 120920,
+  "en": "Por que você diz isso?",
+  "pt": "Why do you say that? Why do you say that?"
  },
  {
-  "startMs": 87533,
-  "endMs": 91193,
-  "en": "but GitHub recommends we use main.",
-  "pt": "mas o GitHub recomenda que a gente use main."
+  "startMs": 121470,
+  "endMs": 128400,
+  "en": "Next: which? We use which when there are options.",
+  "pt": "Próxima: which? Which nós utilizamos quando temos opções."
  },
  {
-  "startMs": 91333,
-  "endMs": 96307,
-  "en": "So we'll rename our main path to main in our Git.",
-  "pt": "Então a gente vai ter que trocar aqui no nosso Git o nome do nosso caminho principal pra main."
+  "startMs": 128450,
+  "endMs": 132490,
+  "en": "For example, which do you want?",
+  "pt": "Por exemplo, which do you want? Qual você quer?"
  },
  {
-  "startMs": 96527,
-  "endMs": 100977,
-  "en": "So I'll call git branch -m, to rename,",
-  "pt": "Então eu vou chamar git branch -m, pra renomear,"
+  "startMs": 135120,
+  "endMs": 141430,
+  "en": "Next one. What? We can translate it as \"o quê\".",
+  "pt": "Vamos para a próxima. What? Nós podemos traduzir como o quê."
  },
  {
-  "startMs": 101027,
-  "endMs": 102967,
-  "en": "and change the name to main.",
-  "pt": "e aí eu troco o nome pra main, ó."
+  "startMs": 141480,
+  "endMs": 147220,
+  "en": "O que você faz?",
+  "pt": "What do you do? O que você faz? What do you do?"
  },
  {
-  "startMs": 103487,
-  "endMs": 104687,
-  "en": "Done, renamed.",
-  "pt": "Pronto, renomeei."
+  "startMs": 147760,
+  "endMs": 150630,
+  "en": "Where? \"Onde\"?",
+  "pt": "Where? Onde?"
  },
  {
-  "startMs": 105067,
-  "endMs": 108257,
-  "en": "Now the names match. If I want to check the actual name,",
-  "pt": "Agora os nomes estão batendo. Se eu quiser dar uma olhada aqui no nome real,"
+  "startMs": 150680,
+  "endMs": 158210,
+  "en": "Por exemplo: onde está Jonas?",
+  "pt": "For example, where is Jonas? Where is Jonas? Where is Jonas?"
  },
  {
-  "startMs": 108307,
-  "endMs": 109947,
-  "en": "I call git branch here.",
-  "pt": "eu chamo o git branch aqui, ó."
+  "startMs": 158260,
+  "endMs": 160260,
+  "en": "Where is Jonas?",
+  "pt": "Onde está Jonas?"
  },
  {
-  "startMs": 110387,
-  "endMs": 113797,
-  "en": "It shows me I'm on main, so now it's right.",
-  "pt": "Ele me mostra aqui, ó: tô na main, então agora tá certo."
+  "startMs": 160920,
+  "endMs": 165640,
+  "en": "When? When, when, \"quando\".",
+  "pt": "When? When, when, quando."
  },
  {
-  "startMs": 113847,
-  "endMs": 115467,
-  "en": "OK. OK.",
-  "pt": "Tá. Tá."
+  "startMs": 165720,
+  "endMs": 170510,
+  "en": "When do you arrive?",
+  "pt": "When do you arrive? Quando você chega?"
  },
  {
-  "startMs": 115607,
-  "endMs": 120887,
-  "en": "And I'll do a git push to push my local repository to the cloud.",
-  "pt": "E eu vou fazer um git push pra empurrar o meu repositório local pra nuvem."
+  "startMs": 170560,
+  "endMs": 176760,
+  "en": "How, how, how are you?",
+  "pt": "How, how, how are you? Como você está?"
  },
  {
-  "startMs": 121007,
-  "endMs": 124687,
-  "en": "But I have to say I want to push to origin.",
-  "pt": "Só que eu tenho que dizer que eu quero empurrar pra origin."
+  "startMs": 176810,
+  "endMs": 183300,
+  "en": "So remember that how isn't originally a WH question,",
+  "pt": "Então, lembrando aqui que o how não é originalmente uma WH question,"
  },
  {
-  "startMs": 124907,
-  "endMs": 127977,
-  "en": "See how I added origin, which is the link here?",
-  "pt": "Tá vendo que eu adicionei origin, que é o link aqui?"
+  "startMs": 183350,
+  "endMs": 189240,
+  "en": "because it has the W and the H, but there's an O between them.",
+  "pt": "porque ele tem o W, ele tem o H, mas a gente tem um O ali que faz a separação entre eles."
  },
  {
-  "startMs": 128027,
-  "endMs": 131847,
-  "en": "Right. Origin, and the branch name, main.",
-  "pt": "Pois é. Origin, e o nome da branch, main."
+  "startMs": 189290,
+  "endMs": 192800,
+  "en": "So it doesn't follow the order of the other WH questions.",
+  "pt": "Então, ele não está seguindo a ordem das outras WH questions."
  },
  {
-  "startMs": 134113,
-  "endMs": 135443,
-  "en": "It's sent.",
-  "pt": "Ele enviou, tá?"
+  "startMs": 192850,
+  "endMs": 196240,
+  "en": "But why do we study how with them, just to recap?",
+  "pt": "Mas por que nós estudamos o how junto, só para lembrar?"
  },
  {
-  "startMs": 135493,
-  "endMs": 138553,
-  "en": "At this step it might ask you to log in.",
-  "pt": "Pode ser que nessa etapa aqui ele vá pedir pra vocês logarem, tá?"
+  "startMs": 196290,
+  "endMs": 200480,
+  "en": "Because it's a question that complements all the others.",
+  "pt": "Porque ele é uma pergunta que complementa todas essas outras."
  },
  {
-  "startMs": 138793,
-  "endMs": 141753,
-  "en": "Then you just log in with GitHub as usual.",
-  "pt": "E aí vocês só fazem o login de vocês com o GitHub normal."
+  "startMs": 200530,
+  "endMs": 205620,
+  "en": "And just to recap, we don't answer WH questions",
+  "pt": "E só para lembrar, as WH questions nós não respondemos"
  },
  {
-  "startMs": 142113,
-  "endMs": 146303,
-  "en": "Now I'll go to the repository and hit F5 on the page,",
-  "pt": "E agora eu vou lá no repositório, vou dar um F5 aqui na página,"
+  "startMs": 205670,
+  "endMs": 208080,
+  "en": "with yes, I do, or no, I don't.",
+  "pt": "com yes, I do, or no, I don't."
  },
  {
-  "startMs": 146353,
-  "endMs": 148123,
-  "en": "check it out: my whole project is here,",
-  "pt": "saca só: todo o meu projeto veio pra cá,"
+  "startMs": 208130,
+  "endMs": 210960,
+  "en": "Because what's the point of: what do you do?",
+  "pt": "Porque qual o sentido de what do you do?"
  },
  {
-  "startMs": 148173,
-  "endMs": 151593,
-  "en": "almost instantly, without dragging any files.",
-  "pt": "quase que instantaneamente, sem precisar ficar arrastando arquivo."
+  "startMs": 211010,
+  "endMs": 214270,
+  "en": "What do you do? And you say yes, I do? Yes.",
+  "pt": "O que você faz? E você dizer yes, I do? Sim."
  },
  {
-  "startMs": 152773,
-  "endMs": 156243,
-  "en": "There's main, and ContaCorrente here, OK?",
-  "pt": "Ó a main, olha a ContaCorrente aqui, ok?"
+  "startMs": 214730,
+  "endMs": 216540,
+  "en": "It doesn't make sense, right, guys?",
+  "pt": "Não faz sentido, né, pessoal?"
  },
  {
-  "startMs": 156293,
-  "endMs": 158793,
-  "en": "So that's the push step.",
-  "pt": "Então esse aqui é o passo do push."
+  "startMs": 216590,
+  "endMs": 221380,
+  "en": "So we answer these questions according to what was asked.",
+  "pt": "Então, essas perguntas nós respondemos de acordo com aquilo que foi perguntado."
  },
  {
-  "startMs": 159433,
-  "endMs": 165293,
-  "en": "Let's say I make a change from another computer.",
-  "pt": "Digamos que eu faço uma alteração de outro computador."
+  "startMs": 221430,
+  "endMs": 223260,
+  "en": "So there won't be a short answer,",
+  "pt": "Então, não vai ter uma short answer,"
  },
  {
-  "startMs": 165453,
-  "endMs": 167073,
-  "en": "I'll simulate it here.",
-  "pt": "Eu vou simular aqui, ó."
+  "startMs": 223310,
+  "endMs": 226850,
+  "en": "there won't be a ready short answer for them.",
+  "pt": "não vai ter uma resposta curta pronta pra elas."
  },
  {
-  "startMs": 167453,
-  "endMs": 170543,
-  "en": "I go to main and edit the file,",
-  "pt": "Vou lá na main, eu vou editar o arquivo,"
+  "startMs": 226990,
+  "endMs": 231740,
+  "en": "That's why we have to answer according to the context of the questions.",
+  "pt": "Então, por isso, nós temos que responder de acordo com o contexto das perguntas."
  },
  {
-  "startMs": 170593,
-  "endMs": 172773,
-  "en": "I'm on another computer using my code.",
-  "pt": "tô em outro computador aqui usando meu código."
+  "startMs": 231790,
+  "endMs": 234420,
+  "en": "Por exemplo: como você está?",
+  "pt": "For example, how are you? Como você está?"
  },
  {
-  "startMs": 172973,
-  "endMs": 176700,
-  "en": "Say I want to add a System.out here. I'll do it here.",
-  "pt": "Vamos supor que eu quero adicionar um System.out aqui, vou fazer aqui, ó."
+  "startMs": 234470,
+  "endMs": 237800,
+  "en": "Estou bem ou não estou tão bem hoje.",
+  "pt": "I'm fine or I'm not so good today."
  },
  {
-  "startMs": 176793,
-  "endMs": 183333,
-  "en": "Ctrl C, Ctrl V, quotes, “Funcionando”.",
-  "pt": "Ctrl C, Ctrl V, aspas, “Funcionando”."
+  "startMs": 237850,
+  "endMs": 239280,
+  "en": "Or I'm not so good today.",
+  "pt": "Ou eu não estou tão bem hoje."
  },
  {
-  "startMs": 184300,
-  "endMs": 187993,
-  "en": "Then I committed from the other computer and pushed.",
-  "pt": "E aí eu fiz um commit lá de outro computador, fiz o push, ó."
+  "startMs": 239330,
+  "endMs": 243480,
+  "en": "So that's how our WH questions work.",
+  "pt": "Então, é assim que funcionam as nossas WH questions."
  },
  {
-  "startMs": 189873,
-  "endMs": 194160,
-  "en": "Now, my remote repository… let's go back to the start.",
-  "pt": "Agora, o meu repositório remoto… vamos voltar aqui pro começo."
+  "startMs": 243530,
+  "endMs": 249930,
+  "en": "And before we finish, of course, as we always do in every class,",
+  "pt": "E antes da gente finalizar, claro, né, que já é algo que sempre fazemos em todas as aulas,"
  },
  {
-  "startMs": 194960,
-  "endMs": 197020,
-  "en": "Let's click here to see the commits.",
-  "pt": "Vamos clicar aqui pra ver os commits."
+  "startMs": 250350,
+  "endMs": 254050,
+  "en": "we'll go to our challenge.",
+  "pt": "nós vamos para o nosso challenge."
  },
  {
-  "startMs": 197860,
-  "endMs": 198767,
-  "en": "Oops.",
-  "pt": "Opa."
+  "startMs": 255270,
+  "endMs": 262820,
+  "en": "So, if I wanted to ask you how often you do something,",
+  "pt": "Então, se eu quisesse te perguntar sobre com que frequência você faz alguma coisa,"
  },
  {
-  "startMs": 199820,
-  "endMs": 204420,
-  "en": "My remote repository has two commits:",
-  "pt": "O meu repositório remoto, ele tem dois commits:"
+  "startMs": 262870,
+  "endMs": 268080,
+  "en": "we saw this in the full class, about how often you do it,",
+  "pt": "nós vimos isso na aula completa, sobre com qual frequência você faz,"
  },
  {
-  "startMs": 204780,
-  "endMs": 210140,
-  "en": "the initial one, and this one where I added that little print at the end.",
-  "pt": "o initial e aqui esse momento que eu adicionei aquele printzinho no final do projeto."
+  "startMs": 268130,
+  "endMs": 273190,
+  "en": "what kind of question would I ask you?",
+  "pt": "que tipo de pergunta eu te faria?"
  },
  {
-  "startMs": 211340,
-  "endMs": 219580,
-  "en": "If I come to my local repository, it only has one commit.",
-  "pt": "Se eu vier no meu repositório local, ele só tem um commit."
+  "startMs": 273410,
+  "endMs": 276670,
+  "en": "So, time for you to think, and then I'll give you the answer.",
+  "pt": "Então, tempo para você pensar e depois eu te dou a resposta."
  },
  {
-  "startMs": 221820,
-  "endMs": 223920,
-  "en": "I can't push anymore now,",
-  "pt": "Eu não consigo mais fazer push agora,"
+  "startMs": 279730,
+  "endMs": 285760,
+  "en": "So, to ask about frequency, we use the structure how often.",
+  "pt": "Então, para perguntar sobre frequência, nós utilizamos a estrutura how often."
  },
  {
-  "startMs": 224240,
-  "endMs": 227520,
-  "en": "because my remote is different from my local.",
-  "pt": "porque o meu remoto, ele tá diferente do local."
+  "startMs": 285810,
+  "endMs": 287290,
+  "en": "",
+  "pt": "How often."
  },
  {
-  "startMs": 227660,
-  "endMs": 231930,
-  "en": "To push something to the cloud, I first need to pull what's new there.",
-  "pt": "Então, pra eu poder empurrar algo pra nuvem, eu preciso primeiro puxar o que tem de novo lá."
+  "startMs": 287450,
+  "endMs": 292760,
+  "en": "Remember: in often, we don't pronounce the T.",
+  "pt": "Lembrando que often, a gente não pronuncia o T."
  },
  {
-  "startMs": 231980,
-  "endMs": 234470,
-  "en": "The command to pull: pull.",
-  "pt": "O comando pra puxar, né: pull."
+  "startMs": 292810,
+  "endMs": 295900,
+  "en": "It's a silent letter, a letter you don't pronounce.",
+  "pt": "É uma silent letter, ou seja, uma letra silenciosa."
  },
  {
-  "startMs": 234520,
-  "endMs": 240720,
-  "en": "So git pull from the remote origin, from the main branch,",
-  "pt": "Então git pull de onde tá a origem remota, né, da branch main,"
+  "startMs": 295950,
+  "endMs": 298980,
+  "en": "So you won't say \"of-ten\", but \"of-en\".",
+  "pt": "Então, você não vai dizer \"of-ten\", e sim \"of-en\"."
  },
  {
-  "startMs": 240940,
-  "endMs": 242420,
-  "en": "which is the main path.",
-  "pt": "que é o caminho principal."
+  "startMs": 299030,
+  "endMs": 300490,
+  "en": "",
+  "pt": "How often?"
  },
  {
-  "startMs": 243800,
-  "endMs": 246870,
-  "en": "Done. It added the changes here.",
-  "pt": "Pronto, ó. Ele adicionou aqui as mudanças."
+  "startMs": 301490,
+  "endMs": 303080,
+  "en": "Very good, and that's all for today.",
+  "pt": "Muito bem, e por hoje é só."
  },
  {
-  "startMs": 246920,
-  "endMs": 252330,
-  "en": "And if I run git log now: two commits.",
-  "pt": "E se eu fizer um git log agora: dois commits."
- },
- {
-  "startMs": 253920,
-  "endMs": 255700,
-  "en": "It synced with the cloud.",
-  "pt": "Ele sincronizou com a nuvem."
- },
- {
-  "startMs": 255860,
-  "endMs": 259990,
-  "en": "So: git push sends what I did locally to the cloud. Push.",
-  "pt": "Então: git push pra mandar o que eu fiz no local pra nuvem, empurrar."
- },
- {
-  "startMs": 260040,
-  "endMs": 264100,
-  "en": "And git pull brings it from the cloud to local. OK?",
-  "pt": "E o git pull pra puxar da nuvem pro local. Ok?"
- },
- {
-  "startMs": 264167,
-  "endMs": 265337,
-  "en": "That's it for today.",
-  "pt": "Por hoje, finalizamos."
- },
- {
-  "startMs": 265387,
-  "endMs": 269917,
-  "en": "This was our stage from setting up Git to the final step,",
-  "pt": "Então aqui foi a etapa do nosso configurando o Git até chegar na etapa final,"
- },
- {
-  "startMs": 269967,
-  "endMs": 273567,
-  "en": "making our first push, and our first pull too.",
-  "pt": "que é fazendo o nosso primeiro push, nosso primeiro pull também."
- },
- {
-  "startMs": 274127,
-  "endMs": 279117,
-  "en": "As the projects go on, I'll bring more of what Git can do.",
-  "pt": "E com o passar dos projetos, eu vou trazer um pouco mais de coisas que o Git pode fazer."
- },
- {
-  "startMs": 279167,
-  "endMs": 281047,
-  "en": "Especially branching.",
-  "pt": "Principalmente a questão de ramificação, tá?"
- },
- {
-  "startMs": 281207,
-  "endMs": 282797,
-  "en": "I'll make a dedicated video on branching.",
-  "pt": "Ramificação, eu vou fazer um vídeo dedicado sobre."
- },
- {
-  "startMs": 282847,
-  "endMs": 284807,
-  "en": "It'll be the last Git and GitHub video.",
-  "pt": "Vai ser o último vídeo de Git e GitHub."
- },
- {
-  "startMs": 285067,
-  "endMs": 287133,
-  "en": "So that's all for today. Thanks!",
-  "pt": "Então, por hoje é só. Valeu!"
+  "startMs": 303130,
+  "endMs": 304130,
+  "en": "Tchau, tchau!",
+  "pt": "Bye, bye!"
  }
 ]

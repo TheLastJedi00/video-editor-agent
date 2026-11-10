@@ -19,6 +19,16 @@ export const L = {
   darkText: "#eef4ff",
   success: "#2f9e44",
   error: "#c0392b",
+  strongBg: "linear-gradient(90deg, #2f6fe0, #1f5fe0)",
+  strongText: "#ffffff",
+  codePrompt: "#6b7a99",
+  codeHl: "rgba(57,134,255,.22)",
+  codeIcon: "#9cc2ff",
+  codeLabel: "#b6c3da",
+  captionBg: "rgba(255,255,255,0.96)",
+  captionBorder: "rgba(16,24,40,.08)",
+  presenterShadow: "16,24,40",
+  radius: 24,
 };
 
 export const BG =
@@ -29,9 +39,12 @@ export const AURORA =
 export const SHADOW = "0 20px 45px -18px rgba(16,24,40,.32)";
 export const GLOW = "0 18px 40px -16px rgba(57,134,255,.55)";
 export const TITLE_GRADIENT = "linear-gradient(90deg, #3986ff 0%, #7c5cff 100%)";
+export const BRAND_GRADIENT = TITLE_GRADIENT;
 
 export const sora = loadSora("normal", { weights: ["700"], subsets: ["latin", "latin-ext"] }).fontFamily;
 export const archivo = loadArchivo("normal", { weights: ["500", "600"], subsets: ["latin", "latin-ext"] }).fontFamily;
+export const display = sora;
+export const body = archivo;
 export const mono = loadMono("normal", { weights: ["500", "700"], subsets: ["latin", "latin-ext"] }).fontFamily;
 
 // Motion: 120 / 200 / 320 ms, cubic-bezier(0.16, 1, 0.3, 1); exits accelerate
@@ -50,3 +63,6 @@ export const pop = (t: number, at: number) =>
 
 export const exitP = (t: number, end: number, dur = 0.25) =>
   interpolate(t, [end - dur, end], [1, 0], { ...clamp, easing: easeIn });
+
+// Liga Dev allows the pop for highlights too
+export const spring = pop;
